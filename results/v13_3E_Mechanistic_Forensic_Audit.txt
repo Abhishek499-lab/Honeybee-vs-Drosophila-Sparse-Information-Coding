@@ -1,0 +1,55 @@
+v13.3E MECHANISTIC FORENSIC AUDIT
+==============================================================================
+
+Status: PASS
+Networks: 100
+Conditions: 4
+Matrix files: 400
+
+MATRIX RECONSTRUCTION
+Maximum W reconstruction error: 0.000e+00
+Maximum KCEN reconstruction error: 0.000e+00
+
+FACTORIAL IDENTITY
+Maximum interaction identity error: 1.776e-15
+
+FORENSIC FLAGS
+Number of flags: 36
+
+                   type                       condition                     metric         value                                                                                                       interpretation
+           LOW_VARIANCE                   HONEYBEE__BEE      KCEN_EPLUS_mean_delta  7.523164e-37                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE                   HONEYBEE__BEE     KCEN_EMINUS_mean_delta  5.054551e-20                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE                   HONEYBEE__BEE  KCEN_EPLUS_mean_abs_delta  7.523164e-37                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE                   HONEYBEE__BEE KCEN_EMINUS_mean_abs_delta  5.054551e-20                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE            HONEYBEE__DROSOPHILA      KCEN_EPLUS_mean_delta  1.062519e-21                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE            HONEYBEE__DROSOPHILA     KCEN_EMINUS_mean_delta  7.523164e-37                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE            HONEYBEE__DROSOPHILA  KCEN_EPLUS_mean_abs_delta  1.062519e-21                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE            HONEYBEE__DROSOPHILA KCEN_EMINUS_mean_abs_delta  7.523164e-37                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE        DROSOPHILA_TRANSFER__BEE      KCEN_EPLUS_mean_delta  5.366803e-22                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE        DROSOPHILA_TRANSFER__BEE     KCEN_EMINUS_mean_delta  4.865900e-20                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE        DROSOPHILA_TRANSFER__BEE  KCEN_EPLUS_mean_abs_delta  5.366803e-22                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE        DROSOPHILA_TRANSFER__BEE KCEN_EMINUS_mean_abs_delta  4.865900e-20                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE DROSOPHILA_TRANSFER__DROSOPHILA      KCEN_EPLUS_mean_delta  1.577515e-21                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE DROSOPHILA_TRANSFER__DROSOPHILA     KCEN_EMINUS_mean_delta  5.366803e-22                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE DROSOPHILA_TRANSFER__DROSOPHILA  KCEN_EPLUS_mean_abs_delta  1.577515e-21                                                                      Metric is effectively constant across networks.
+           LOW_VARIANCE DROSOPHILA_TRANSFER__DROSOPHILA KCEN_EMINUS_mean_abs_delta  5.366803e-22                                                                      Metric is effectively constant across networks.
+       HIGH_CORRELATION                   HONEYBEE__BEE            PNKC_mean_delta -9.773802e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION                   HONEYBEE__BEE        PNKC_mean_abs_delta -9.851997e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION                   HONEYBEE__BEE     PNKC_positive_fraction -1.000000e+00 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION                   HONEYBEE__BEE      PNKC_changed_fraction -9.967292e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION            HONEYBEE__DROSOPHILA            PNKC_mean_delta  9.821033e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION            HONEYBEE__DROSOPHILA        PNKC_mean_abs_delta  9.889902e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION            HONEYBEE__DROSOPHILA     PNKC_positive_fraction  1.000000e+00 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION            HONEYBEE__DROSOPHILA      PNKC_changed_fraction  9.965418e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION        DROSOPHILA_TRANSFER__BEE            PNKC_mean_delta -9.950529e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION        DROSOPHILA_TRANSFER__BEE        PNKC_mean_abs_delta -9.961811e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION        DROSOPHILA_TRANSFER__BEE     PNKC_positive_fraction -1.000000e+00 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION        DROSOPHILA_TRANSFER__BEE      PNKC_changed_fraction -9.989526e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION DROSOPHILA_TRANSFER__DROSOPHILA            PNKC_mean_delta  9.975117e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION DROSOPHILA_TRANSFER__DROSOPHILA        PNKC_mean_abs_delta  9.975764e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION DROSOPHILA_TRANSFER__DROSOPHILA     PNKC_positive_fraction  1.000000e+00 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+       HIGH_CORRELATION DROSOPHILA_TRANSFER__DROSOPHILA      PNKC_changed_fraction  9.993046e-01 Discrimination is strongly associated with PN→KC metric; inspect mathematical coupling before causal interpretation.
+DETERMINISTIC_BEHAVIOUR        DROSOPHILA_TRANSFER__BEE               both_correct  0.000000e+00                                             Both-correct outcome is identical across all networks in this condition.
+DETERMINISTIC_BEHAVIOUR DROSOPHILA_TRANSFER__DROSOPHILA               both_correct  1.000000e+00                                             Both-correct outcome is identical across all networks in this condition.
+DETERMINISTIC_BEHAVIOUR                   HONEYBEE__BEE               both_correct  0.000000e+00                                             Both-correct outcome is identical across all networks in this condition.
+DETERMINISTIC_BEHAVIOUR            HONEYBEE__DROSOPHILA               both_correct  1.000000e+00                                             Both-correct outcome is identical across all networks in this condition.

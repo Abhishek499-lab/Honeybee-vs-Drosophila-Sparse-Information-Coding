@@ -1,0 +1,298 @@
+v13.3E — ORIGINAL 44-DISTANCE STIMULUS GENERATION SOURCE SEARCH
+==============================================================================
+Notebooks scanned: 121
+Candidate cells: 1124
+High-priority candidates: 589
+Exact-44 cells: 5
+
+IMPORTANT:
+This search does not execute any model.
+Cells classified as later audit/search code are not treated as original stimulus-generation evidence.
+
+==============================================================================
+TOP HIGH-PRIORITY CANDIDATES
+==============================================================================
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb
+Cell: 23
+Classification: HIGH_PRIORITY_44_GENERATION_CANDIDATE
+Score: 156
+44 hits: 5
+Generation hits: 9
+Code length: 16280
+Preview:  # ============================================================================ # v13.3E — 44-DISTANCE STIMULUS SOURCE FORENSIC SEARCH # ============================================================================ # # Goal: # Find the original source that generated the older: # # Hamming distance = 44 / 100 # Active-PN overlap = 28 / 50 # Jaccard similarity = 38.9% # # Current validated continuum: # Hamming = 28 # overlap = 36/50 # Jaccard = 56.25% # # This search focuses on SOURCE CODE / NOTEBOOKS / TEXT, # because the 44-distance matrix was not found among the # 643 CSV/XLSX cand
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 54
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 131
+44 hits: 0
+Generation hits: 15
+Code length: 31742
+Preview:  # ================================================================================ # v13.2I — CONTROLLED TEMPORAL CAUSALITY # ================================================================================ # Goal: # Determine whether temporal reinforcement history has an effect beyond # simple transition count. # # DESIGN: # # A) SAME TRANSITIONS # Different cumulative reinforcement history # # B) SAME MAX RUN # Different transition structure # # C) SAME TRANSITIONS + SAME MAX RUN # Different temporal placement # # D) SAME TRANSITIONS + SAME HISTORY # Different ordering # # Each 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 55
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 131
+44 hits: 0
+Generation hits: 15
+Code length: 31742
+Preview:  # ================================================================================ # v13.2I — CONTROLLED TEMPORAL CAUSALITY # ================================================================================ # Goal: # Determine whether temporal reinforcement history has an effect beyond # simple transition count. # # DESIGN: # # A) SAME TRANSITIONS # Different cumulative reinforcement history # # B) SAME MAX RUN # Different transition structure # # C) SAME TRANSITIONS + SAME MAX RUN # Different temporal placement # # D) SAME TRANSITIONS + SAME HISTORY # Different ordering # # Each 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 56
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 129
+44 hits: 0
+Generation hits: 14
+Code length: 27884
+Preview:  # ================================================================================ # v13.2I-FAST — CONTROLLED TEMPORAL CAUSALITY # ================================================================================ # FAST / OPTIMIZED VERSION # # Scientific question: # Does reinforcement-history structure affect the learned phenotype # independently of simple transition count? # # Design: # A = same transitions, different history # B = same max-run, different transitions # C = same transitions + same max-run, different placement # # Important: # - Same 100 host networks are reused across 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled90.ipynb
+Cell: 3
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 125
+44 hits: 0
+Generation hits: 14
+Code length: 23190
+Preview:  # ================================================================ # HONEYBEE MODEL v6 # CORRECTED 100-PATTERN CONTINUUM + PEAK-SHIFT TEST # # Based on Peng & Chittka (2017) # # IMPORTANT: # Pattern 51 = CS+ # Pattern 65 = CS- # # The continuum itself is created FIRST. # CS+ and CS- are then taken directly from that SAME continuum. # # This avoids the coordinate mismatch in v4/v5. # ================================================================ import numpy as np import pandas as pd import matplotlib.pyplot as plt from pathlib import Path # ================================================
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 64
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 125
+44 hits: 0
+Generation hits: 14
+Code length: 37459
+Preview:  # ================================================================================ # v13.3E — MECHANISTIC INSTRUMENTATION # ================================================================================ # GOAL: # v13.3D ke behavioural architecture × rule interaction ko # synaptic + KC-representation level par investigate karna. # # 2×2: # HONEYBEE__BEE # HONEYBEE__DROSOPHILA # DROSOPHILA_TRANSFER__BEE # DROSOPHILA_TRANSFER__DROSOPHILA # # SAVES: # 1. Behavioural metrics # 2. Behavioural profiles # 3. PN→KC mechanistic summaries # 4. KC→EN mechanistic summaries # 5. KC 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 88
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 125
+44 hits: 0
+Generation hits: 12
+Code length: 11772
+Preview:  # ============================================================ # HONEYBEE–DROSOPHILA PROJECT # STIMULUS GEOMETRY + PEAK-SHIFT ANALYSIS # CLEAN PUBLICATION-STYLE FIGURE # ============================================================ import numpy as np import matplotlib.pyplot as plt from matplotlib.patches import Rectangle from matplotlib.lines import Line2D # ------------------------------------------------------------ # 1. GLOBAL SETTINGS # ------------------------------------------------------------ np.random.seed(42) N_PN = 100 N_STIM = 100 ACTIVE_PN = 50 # ----------------------------
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb
+Cell: 24
+Classification: HIGH_PRIORITY_44_GENERATION_CANDIDATE
+Score: 124
+44 hits: 5
+Generation hits: 8
+Code length: 14289
+Preview:  # ============================================================================ # v13.3E — UNTITLED120 CHRONOLOGICAL 44-SOURCE FORENSIC AUDIT # ============================================================================ # # PURPOSE # ------- # Untitled120 produced 32 exact-44 hits, but the displayed context shows that # many/all of these are from the provenance-audit code that WE added later. # # This audit: # # 1. Reads Untitled120 cell-by-cell. # 2. Finds every 44-related occurrence. # 3. Reports CELL NUMBER. # 4. Separates: # A. original/pre-audit content # B. provena
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 57
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 124
+44 hits: 0
+Generation hits: 14
+Code length: 31309
+Preview:  # ================================================================================ # v13.2I-FAST-CORRECTED # ================================================================================ # Fix: # late_transitions indexing bug corrected. # # Additional: # schedule generation + simulation in one clean cell # ================================================================================ import os import numpy as np import pandas as pd from scipy.stats import ( pearsonr, spearmanr, ttest_rel, wilcoxon ) from google.colab import drive drive.mount('/content/drive') BASE
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 49
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 123
+44 hits: 0
+Generation hits: 15
+Code length: 23796
+Preview:  # ============================================================ # HONEYBEE MODEL v13.2E # MECHANISTIC DECOMPOSITION OF DROSOPHILA-INSPIRED RULE # # Conditions: # 1. DROSOPHILA_CANONICAL # Reward -> EMINUS depression # Punishment -> EPLUS depression # Alternating temporal order # # 2. REVERSED_VALENCE # Reward -> EPLUS depression # Punishment -> EMINUS depression # Same alternating temporal order # # 3. BLOCKED_VALENCE # Same canonical valence mapping # But 10 reward trials followed by 10 punishment trials # # 4. BALANCED_RANDOM # Exact
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 50
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 123
+44 hits: 0
+Generation hits: 15
+Code length: 26670
+Preview:  # ============================================================ # HONEYBEE MODEL v13.2F # TEMPORAL-ORDER / VALENCE-MAPPING DECOMPOSITION # # Goal: # Determine whether the learned phenotype depends on: # A) canonical valence mapping # B) temporal order of reward/punishment # C) interaction between mapping and order # # Conditions # ------------------------------------------------------------ # 1. CANONICAL_ALTERNATING # R-P-R-P-R-P... # Reward -> EMINUS # Punishment -> EPLUS # # 2. CANONICAL_RANDOM # Exactly 10 R + 10 P # Randomly shuffled # Reward 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 51
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 123
+44 hits: 0
+Generation hits: 15
+Code length: 25435
+Preview:  # ============================================================ # HONEYBEE MODEL v13.2G # QUANTITATIVE TEMPORAL-ORDER SWEEP # # PURPOSE # ------- # v13.2F showed: # Alternating >> Random >> Blocked # # But this does NOT tell us whether there is a gradual # temporal-order effect or merely a difference between a few # hand-picked schedules. # # v13.2G creates many balanced schedules with different degrees # of temporal clustering while keeping: # # - exactly 10 Reward trials # - exactly 10 Punishment trials # - canonical valence mapping # - same 20 total trials # - same Bee architect
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled91.ipynb
+Cell: 1
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 122
+44 hits: 0
+Generation hits: 16
+Code length: 50725
+Preview:  # ===================================================================== # HONEYBEE MODEL v10.1 # ===================================================================== # # CORRECTED CONTINUUM + PEAK-SHIFT LEARNING-RATE SPACE # # Main question: # # Can a honeybee-like sparse learning architecture develop a # generalized peak around a conditioned stimulus after differential # conditioning? # # This version fixes the v9 continuum construction problem. # # ===================================================================== import numpy as np import pandas as pd import matplotlib.pyplot as plt 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 21
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 122
+44 hits: 0
+Generation hits: 14
+Code length: 17205
+Preview:  # ================================================================ # HONEYBEE MODEL v12.3M # CONTROLLED 2 × 2 FACTORIAL EXPERIMENT # Bee vs Drosophila learning rule # ================================================================ import os import numpy as np import pandas as pd from scipy.stats import ttest_rel # ------------------------------------------------ # 1. GOOGLE DRIVE # ------------------------------------------------ from google.colab import drive drive.mount('/content/drive') OUT = "/content/drive/MyDrive/Honey" os.makedirs(OUT, exist_ok=True) # ----------------------------
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 22
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 122
+44 hits: 0
+Generation hits: 14
+Code length: 17205
+Preview:  # ================================================================ # HONEYBEE MODEL v12.3M # CONTROLLED 2 × 2 FACTORIAL EXPERIMENT # Bee vs Drosophila learning rule # ================================================================ import os import numpy as np import pandas as pd from scipy.stats import ttest_rel # ------------------------------------------------ # 1. GOOGLE DRIVE # ------------------------------------------------ from google.colab import drive drive.mount('/content/drive') OUT = "/content/drive/MyDrive/Honey" os.makedirs(OUT, exist_ok=True) # ----------------------------
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled91.ipynb
+Cell: 5
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 120
+44 hits: 0
+Generation hits: 15
+Code length: 27626
+Preview:  # ===================================================================== # HONEYBEE MODEL v10.4 # DIFFERENTIAL CONDITIONING + GENERALIZATION # ===================================================================== # # INPUT: # Validated v10.3 continuum # # CS+: # Pattern 51 # # CS-: # Pattern 65 # # PURPOSE: # Test whether differential conditioning produces a reproducible # response peak/generalization profile across the stimulus continuum. # # IMPORTANT: # NO NEW CONTINUUM IS GENERATED. # The validated v10.3 continuum is used exactly as constructed. # # ==========================
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled92.ipynb
+Cell: 1
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 120
+44 hits: 0
+Generation hits: 15
+Code length: 27626
+Preview:  # ===================================================================== # HONEYBEE MODEL v10.4 # DIFFERENTIAL CONDITIONING + GENERALIZATION # ===================================================================== # # INPUT: # Validated v10.3 continuum # # CS+: # Pattern 51 # # CS-: # Pattern 65 # # PURPOSE: # Test whether differential conditioning produces a reproducible # response peak/generalization profile across the stimulus continuum. # # IMPORTANT: # NO NEW CONTINUUM IS GENERATED. # The validated v10.3 continuum is used exactly as constructed. # # ==========================
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 60
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 120
+44 hits: 0
+Generation hits: 13
+Code length: 22088
+Preview:  # ============================================================================= # v13.2I-E+ — ACTUAL STRICT SUMMARY-HISTORY TEMPORAL CONTROL EXPERIMENT # # 100 matched schedule pairs # × 100 identical host networks # = 10,000 pairwise schedule comparisons # = 20,000 individual schedule runs # # Controls: # SAME: # 10 R + 10 P # transitions # maximum run # cumulative-history summary: sum(abs(history)) # max absolute history # # DIFFERENT: # exact temporal ordering # # CRITICAL: # Corrected PN-KC WRITE-BACK is explicitly implemented here. # ============
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 58
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 119
+44 hits: 0
+Generation hits: 14
+Code length: 22360
+Preview:  # ============================================================================= # v13.2I — CORRECTED CONTROLLED TEMPORAL CAUSALITY EXPERIMENT # PN-KC WRITE-BACK FIX INCLUDED # ============================================================================= import os import numpy as np import pandas as pd from scipy.stats import ttest_rel, wilcoxon, spearmanr, pearsonr from google.colab import drive drive.mount('/content/drive') OUTDIR = "/content/drive/MyDrive/Honey" os.makedirs(OUTDIR, exist_ok=True) print("="*80) print("v13.2I CORRECTED — CONTROLLED TEMPORAL CAUSALITY") print("="*80) # --
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 20
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 119
+44 hits: 0
+Generation hits: 13
+Code length: 12894
+Preview:  # ================================================================ # HONEYBEE MODEL v12.3L # PN-KC PLASTICITY DOSE SWEEP # ================================================================ import os import numpy as np import pandas as pd from scipy.stats import spearmanr, pearsonr, ttest_rel # ------------------------------------------------ # 1. GOOGLE DRIVE # ------------------------------------------------ from google.colab import drive drive.mount('/content/drive') OUT = "/content/drive/MyDrive/Honey" os.makedirs(OUT, exist_ok=True) # ------------------------------------------------ # 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 46
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 119
+44 hits: 0
+Generation hits: 13
+Code length: 29978
+Preview:  # ============================================================================= # HONEYBEE MODEL — v13.2B-CORRECTED # DROSOPHILA vs STRENGTH-MATCHED RANDOM RULE # # PURPOSE: # Compare the structured Drosophila-inspired plasticity rule against # strength-matched randomized rules using the EXACT validated # 100 stimuli × 100 PN continuum. # # IMPORTANT: # - Uses ONLY PN_1 ... PN_100 as stimulus inputs. # - No metadata columns enter the neural model. # - Same host network is used for Drosophila and random rules. # - Same stimulus schedule / KC activity / update magnitude. # - Ran
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled93.ipynb
+Cell: 15
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 118
+44 hits: 0
+Generation hits: 15
+Code length: 25117
+Preview: # ============================================================================= # HONEYBEE MODEL v12.2.7 # PUBLISHED ARCHITECTURE RECONSTRUCTION AUDIT # # Based on Peng & Chittka (2017) # # Architecture: # PN = 100 # KC = 4000 # PN->KC connections = uniform integer 5-15 # KC sparsity = exactly 5% # KC->EN+ and KC->EN- = all-to-one # Initial PN-KC weight = 0.2 # Initial KC-EN weight = 0.2 # Weight bounds = [0, 0.4] # PN-KC alpha+ = 0.006 # PN-KC alpha- = 0.007 # KC-EN alpha+ = 0.006 # KC-EN alpha- = 0.008 # ================================================================
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled90.ipynb
+Cell: 4
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 118
+44 hits: 0
+Generation hits: 14
+Code length: 29859
+Preview:  # ================================================================ # HONEYBEE MODEL v7 # STATISTICALLY VALIDATED PEAK-SHIFT TEST # # Based on Peng & Chittka (2017) # # IMPORTANT: # CS+ = pattern 51 # CS- = pattern 65 # # Improvements over v6: # 1. 100 unique continuum patterns # 2. No saturation / duplicated tails # 3. Same continuum used for training and testing # 4. 100 networks # 5. 10 groups x 10 networks # 6. Paired t-test for peak-shift success # 7. Absolute-training control # # ================================================================ import numpy as np import
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 48
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 117
+44 hits: 0
+Generation hits: 13
+Code length: 31829
+Preview:  # ============================================================================= # HONEYBEE MODEL — v13.2D # BALANCED RANDOM-RULE CONTROL # # CORE QUESTION: # Does the specific Drosophila valence mapping matter, beyond merely having # the same amount of output plasticity? # # DROSOPHILA: # Reward -> EMINUS depression # Punishment -> EPLUS depression # # BALANCED RANDOM: # Same KC eligibility # Same eta # Same number of output updates # Same PN-KC remodeling # BUT output target is randomized. # # IMPORTANT: # Randomization is balanced WITHIN EACH TRAINING RUN: # 10
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled92.ipynb
+Cell: 14
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 116
+44 hits: 0
+Generation hits: 14
+Code length: 38420
+Preview:  # ============================================================================= # HONEYBEE MODEL v11.4 # FOCUSED PARAMETER VALIDATION + MATCHED GRADED CAUSAL TEST # # Purpose: # Validate the strongest PN-KC parameter region identified in v11.3 # without repeating the full 144-point parameter sweep. # # Selected parameter pair from v11.3: # PN-KC negative = 0.001 # KC-EN negative = 0.003 # # Design: # 100 matched networks # 5 graded perturbation levels # 2 mechanisms # = 1000 observations # # IMPORTANT: # Same base architecture + same initial weights are reused across # per
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled92.ipynb
+Cell: 3
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 115
+44 hits: 0
+Generation hits: 15
+Code length: 43530
+Preview:  # ============================================================================ # HONEYBEE MODEL v10.6 # DIRECTIONAL PEAK-SHIFT + ROBUSTNESS VALIDATION # ============================================================================ # # v10.6 objectives: # 1. Load the validated v10.3 continuum # 2. Re-run the complete 12 x 12 learning-rate space # 3. Use a STRICT DIRECTIONAL peak-shift criterion # 4. Distinguish: # - leftward / away from CS- # - no meaningful shift # - rightward / toward CS- # 5. Calculate effect size, 95% CI and directional success probability # 
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled93.ipynb
+Cell: 16
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 114
+44 hits: 0
+Generation hits: 15
+Code length: 40877
+Preview:  # ============================================================================= # HONEYBEE MODEL v12.2.8 # ============================================================================= # 100-NETWORK MECHANISM ABLATION # # Purpose: # Test whether PN -> KC plasticity produces peak shift specifically # when KC -> EN plasticity is also present. # # Conditions: # 1. FULL : PN-KC plastic + KC-EN plastic # 2. PN_KC_FIXED : PN-KC fixed + KC-EN plastic # 3. KC_EN_FIXED : PN-KC plastic + KC-EN fixed # 4. NONE : both fixed # # Architecture: # PN = 100 # KC = 4000 # PN
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled92.ipynb
+Cell: 12
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 114
+44 hits: 0
+Generation hits: 14
+Code length: 30534
+Preview:  # ============================================================================= # HONEYBEE MODEL v11.2 FAST # PARAMETER-SPACE × GRADED CAUSAL VALIDATION # # SAME SCIENTIFIC DESIGN # FAST SPARSE IMPLEMENTATION # ============================================================================= from google.colab import drive drive.mount("/content/drive") import os import numpy as np import pandas as pd import matplotlib.pyplot as plt from scipy import stats from scipy.sparse import csr_matrix # ============================================================================= # 1. OUTPUT # =========
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 23
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 114
+44 hits: 0
+Generation hits: 12
+Code length: 17038
+Preview:  # ================================================================ # HONEYBEE MODEL v12.3N # DROSOPHILA vs BEE — PN-KC DOSE RESPONSE # ================================================================ import os import numpy as np import pandas as pd from scipy.stats import spearmanr, pearsonr # ------------------------------------------------ # 1. DRIVE # ------------------------------------------------ from google.colab import drive drive.mount('/content/drive') OUT = "/content/drive/MyDrive/Honey" os.makedirs(OUT, exist_ok=True) # ------------------------------------------------ # 2. SET
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Cell: 24
+Classification: POSSIBLE_ORIGINAL_GENERATION
+Score: 114
+44 hits: 0
+Generation hits: 12
+Code length: 17038
+Preview:  # ================================================================ # HONEYBEE MODEL v12.3N # DROSOPHILA vs BEE — PN-KC DOSE RESPONSE # ================================================================ import os import numpy as np import pandas as pd from scipy.stats import spearmanr, pearsonr # ------------------------------------------------ # 1. DRIVE # ------------------------------------------------ from google.colab import drive drive.mount('/content/drive') OUT = "/content/drive/MyDrive/Honey" os.makedirs(OUT, exist_ok=True) # ------------------------------------------------ # 2. SET
+
+==============================================================================
+EXACT-44 CANDIDATES
+==============================================================================
+
+/content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb | cell 23 | HIGH_PRIORITY_44_GENERATION_CANDIDATE | score=156 | 44_hits=5 | generation_hits=9
+
+/content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb | cell 24 | HIGH_PRIORITY_44_GENERATION_CANDIDATE | score=124 | 44_hits=5 | generation_hits=8
+
+/content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb | cell 22 | HIGH_PRIORITY_44_GENERATION_CANDIDATE | score=106 | 44_hits=4 | generation_hits=5
+
+/content/drive/MyDrive/Colab Notebooks/Untitled93.ipynb | cell 17 | HIGH_PRIORITY_44_GENERATION_CANDIDATE | score=58 | 44_hits=2 | generation_hits=4
+
+/content/drive/MyDrive/Colab Notebooks/Untitled94.ipynb | cell 3 | HIGH_PRIORITY_44_GENERATION_CANDIDATE | score=35 | 44_hits=1 | generation_hits=3

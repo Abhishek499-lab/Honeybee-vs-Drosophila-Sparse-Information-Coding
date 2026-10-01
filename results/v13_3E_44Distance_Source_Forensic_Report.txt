@@ -1,0 +1,116 @@
+v13.3E — 44-DISTANCE STIMULUS SOURCE FORENSIC SEARCH
+==============================================================================
+Searchable files: 776
+Total relevant hits: 14282
+Exact 44-related hits: 38
+28/50 or Jaccard hits: 4284
+
+HIGH-PRIORITY FILES
+------------------------------------------------------------------------------
+Score 270 | 264 hits | /content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb
+Terms: 0.389; 28 / 50; 28/50; 38.9%; 44 / 100; 44/100; active_pn; choice(; cs+; cs-; hamming; hamming distance 44; hamming distance = 44; hamming distance: 44; jaccard; np.random; overlap; pattern == 51; pattern == 65; patterns == 51; patterns == 65; pn_cols; random.choice; stimulus difference; stimulus geometry
+Score 130 | 1477 hits | /content/drive/MyDrive/Colab Notebooks/Untitled93.ipynb
+Terms: 44 / 100; 44/100; active_pn; choice(; cs+; cs-; jaccard; np.random; overlap; pn_cols; stimulus geometry
+Score 130 | 15 hits | /content/drive/MyDrive/Honey/GitHub_Honeybee-Drosophila/results/v13_3E_Stimulus_Provenance_Audit.txt
+Terms: 44/100; cs+; cs-; hamming; hamming distance 44; jaccard; overlap
+Score 110 | 348 hits | /content/drive/MyDrive/Colab Notebooks/Untitled94.ipynb
+Terms: 44/100; active_pn; choice(; cs+; cs-; hamming; np.random; overlap; pn_cols
+Score 90 | 1275 hits | /content/drive/MyDrive/Colab Notebooks/Untitled98.ipynb
+Terms: active_pn; choice(; cs+; cs-; hamming; jaccard; np.random; overlap; pattern == 51; pattern == 65; patterns == 51; patterns == 65; pn_cols; random.choice; stimulus difference; stimulus geometry
+Score 80 | 1724 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_2I_CORRECTED_Eplus_Profiles.csv
+Terms: 0.389
+Score 80 | 800 hits | /content/drive/MyDrive/Honey/v13_3_Bee_Rule_Audit/v13_3J_KC_Remodeling_Rankings.csv
+Terms: 0.389
+Score 80 | 309 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_2_RandomRule_Profiles.csv
+Terms: 0.389
+Score 80 | 231 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_2I_CORRECTED_Profiles.csv
+Terms: 0.389
+Score 80 | 222 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3O_TrainingTrajectory_Profiles.csv
+Terms: 0.389
+Score 80 | 163 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3P_Critical_PNKC_Threshold_Profiles.csv
+Terms: 0.389
+Score 80 | 102 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_40_MultiSeed_RepeatResults.csv
+Terms: 0.389
+Score 80 | 77 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_2G_profiles.csv
+Terms: 0.389
+Score 80 | 71 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3U_Exact_Profile_Reconciliation.csv
+Terms: 0.389
+Score 80 | 59 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3W_P_Positioning_Audit.csv
+Terms: 0.389
+Score 80 | 48 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_1_Random_Shuffled_Transfer.csv
+Terms: 0.389
+Score 80 | 34 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3Y_CausalPhenotype_Cellwise.csv
+Terms: 0.389
+Score 80 | 32 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3N_Dopa_Bee_Dose_Profiles.csv
+Terms: 0.389
+Score 80 | 32 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_8_ANCOVA_Cellwise.csv
+Terms: 0.389
+Score 80 | 24 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_34_Counterfactual_PeakDistributions.csv
+Terms: 0.389
+Score 80 | 21 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_14_WithinNetwork_Permutation_Null/01_Network_WithinNetwork_Permutation.csv
+Terms: 0.389; overlap
+Score 80 | 21 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v4_PeakShift_Generalization.csv
+Terms: 0.389
+Score 80 | 20 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_11B_Geometric_PeakShift/01_Network_Level_Geometric_Analysis.csv
+Terms: 0.389; overlap
+Score 80 | 20 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_12C_Geometry_Null_Test/01_Network_Geometry_Null_Analysis.csv
+Terms: 0.389; overlap
+Score 80 | 20 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_13_Geometry_Controlled_CSplus_Test/01_Network_CSplus_Geometry_Rank.csv
+Terms: 0.389; overlap
+Score 80 | 20 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_33_Interaction_ProfileAnalysis.csv
+Terms: 0.389
+Score 80 | 19 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_9_LearningRate_Checkpoint.csv
+Terms: 0.389
+Score 80 | 17 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_29_SignedComponent_ProfileAnalysis.csv
+Terms: 0.389
+Score 80 | 17 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_31B_ProfileGeometry.csv
+Terms: 0.389
+Score 80 | 11 hits | /content/drive/MyDrive/Honey/v12_2_5_Strict_Null_Mechanism_Control/v12_2_5_RAW_RESULTS.csv
+Terms: 0.389
+Score 80 | 10 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_28_Decomposition_Profiles.csv
+Terms: 0.389
+Score 80 | 10 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v6_All_Test_Responses.csv
+Terms: 0.389
+Score 80 | 9 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_1_Random_Shuffled_Drosophila_Direction.csv
+Terms: 0.389
+Score 80 | 8 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_2I_CORRECTED_Eplus_Run_Metrics.csv
+Terms: 0.389
+Score 80 | 7 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v4_PeakShift_Network_Summary.csv
+Terms: 0.389; active_pn
+Score 80 | 6 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_16_ResponseProfiles.csv
+Terms: 0.389
+Score 80 | 6 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_25_Counterfactual_Profiles.csv
+Terms: 0.389
+Score 80 | 6 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_26_PeakLocation_ProfileAnalysis.csv
+Terms: 0.389
+Score 80 | 6 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_27_ResponseDecomposition_Profiles.csv
+Terms: 0.389
+Score 80 | 6 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3L_PNKC_DoseSweep_Profiles.csv
+Terms: 0.389
+Score 80 | 6 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_2E_Mechanistic_Profiles.csv
+Terms: 0.389
+Score 80 | 6 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v7_Differential_Responses.csv
+Terms: 0.389
+Score 80 | 5 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3O_TrainingTrajectory_Networks.csv
+Terms: 0.389
+Score 80 | 4 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3V_N_Within_Rule_Profile_Comparison.csv
+Terms: 0.389
+Score 80 | 4 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v3_All_Networks.csv
+Terms: 0.389
+Score 80 | 3 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_3M_Factorial_Profiles.csv
+Terms: 0.389
+Score 80 | 3 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v13_2_RandomRule_NetworkMetrics.csv
+Terms: 0.389
+Score 80 | 3 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v5_Differential_Test.csv
+Terms: 0.389
+Score 80 | 3 hits | /content/drive/MyDrive/Honey/results/stress_test.csv
+Terms: 0.389
+Score 80 | 2 hits | /content/drive/MyDrive/Honey/Honeybee_Model_v12_2_22_LocalPeak_NetworkAnalysis.csv
+Terms: 0.389
+
+INTERPRETATION
+------------------------------------------------------------------------------
+A source containing an explicit 44-distance statement was found.
+Inspect the corresponding notebook/code context to reconstruct the exact stimulus-generation route.
+
+[PASS] Source forensic search completed

@@ -1,0 +1,561 @@
+file,extension,n_exact44_occurrences,n_unique_contexts,classification,source_score,calculation_signatures,best_context
+/content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb,.ipynb,32,32,HIGH_PRIORITY_SOURCE_OR_CALCULATION,15,hamming; jaccard; overlap; active.*overlap; distance,"==================================
+# FINAL
+# ============================================================================
+
+print(""\n"" + ""="" * 78)
+print(""FINAL AUDIT"")
+print(""="" * 78)
+
+print(
+    f""Rows: {len(network_df)}""
+)
+
+print(
+    f""Null rows: {len(null_df):,}""
+)
+
+print(
+    f""Conditions: ""
+    f""{network_df['condition'].nunique()}""
+)
+
+print(
+    f""CS+ active count: ""
+    f""{network_df['csplus_active_count'].unique()}""
+)
+
+print(
+    f""CS- active count: ""
+    f""{network_df['csminus_active_count'].unique()}""
+)
+
+assert len(network_df) == 400
+assert len(null_df) == 400 * N_PERMUTATIONS
+assert network_df[""observed_discrimination""].notna().all()
+assert network_df[""null_mean_discrimination""].notna().all()
+assert np.isfinite(
+    network_df[""null_z""].dropna()
+).all()
+
+print(
+    ""\n[PASS] KCEN permutation causal/null audit""
+)
+
+print(""\nSaved:"")
+print(f""✓ {OUT_CSV}"")
+print(f""✓ {OUT_SUMMARY}"")
+print(f""✓ {OUT_REPORT}"")
+
+print(""\n"" + ""="" * 78)
+print(""v13.3E KCEN REPRESENTATION-PERMUTATION NULL — COMPLETE"")
+print(""="" * 78)
+### CELL 22 ###
+
+# ============================================================================
+# v13.3E — STIMULUS PROVENANCE / 28-vs-44 AUDIT
+# ============================================================================
+#
+# PURPOSE
+# -------
+# Resolve the discrepancy between:
+#
+#   Current v13.3E validated continuum:
+#       CS+ = pattern 51
+#       CS- = pattern 65
+#       Hamming distance reported = 28
+#
+#   Older peak-shift figure:
+#       Hamming distance = 44/100
+#       Active-PN overlap = 28/50
+#       Jaccard similarity = 38.9%
+#
+# This audit searches the Honey project directory for candidate CSV/XLSX
+# stimulus matrices and determines exactly which file/version produces
+# which geometry.
+#
+# NO MODEL IS RERUN.
+# ============================================================================
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+import os
+import glob
+import json
+import re
+import hashlib
+import warnings
+
+import numpy as np
+import pandas as pd
+
+warnings.filterwarnings(""ignore"")
+
+# ============================================================================
+# PATHS
+# ============================================================================
+
+HONEY = ""/content/drive/MyDrive/Honey""
+
+REPO = os.path.join(
+    HONEY,
+    ""GitHub_Honeybee-Drosophila""
+)
+
+RESULTS = os.path.join(
+    REPO,
+    ""results""
+)
+
+OUT_CSV = os.path.join(
+    RESULTS,
+    ""v13_3E_Stimulus_Provenance_Audit.csv""
+)
+
+OUT_REPORT = os.path.join(
+    RESULTS,
+    ""v13_3E_Stimulus_Provenance_Audit.txt""
+)
+
+OUT_JSON = os.path.join(
+    RESULTS,
+    ""v13_3E_Stimulus_Provenance_Audit.json""
+)
+
+os.makedirs(RESULTS, exist_ok=True)
+
+# ============================================================================
+# EXPECTED CURRENT v13.3E CONTINUUM
+# ============================================================================
+
+CURRENT_FILE = os.path.join(
+    HONEY,
+    ""Honeybee_Model_v10_3_Validated_Continuum.csv""
+)
+
+# ============================================================================
+# SEARCH ROOTS
+# ============================================================================
+
+SEARCH_ROOTS = [
+    HONEY,
+    ""/content/drive/MyDrive/Colab Notebooks""
+]
+
+# ============================================================================
+# HELPER FUNCTIONS
+# ============================================================================
+
+def md5_file(path, chunk_size=1024 * 1024):
+    """"""Calculate MD5 for provenance comparison.""""""
+    h = hashlib.md5()
+
+    try:
+        with open(path, ""rb"") as f:
+            while True:
+                chunk = f.read(chunk_size)
+
+                if not chunk:
+                    break
+
+                h.update(chunk)
+
+        return h.hexdigest()
+
+    except Exception:
+        return """"
+
+
+def find_pattern_column(df):
+    candidates = [
+        c for c in df.columns
+        if str(c).strip().lower() in [
+            ""pattern"",
+            ""stimulus"",
+            ""stimulus_index"",
+            ""stimulus_id"",
+  "
+/content/drive/MyDrive/Colab Notebooks/Untitled93.ipynb,.ipynb,2,2,LIKELY_OUTPUT_OR_REPORT,5,,"    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 72.5 %
+
+  CONDITION: NONE
+    CS+ PI: -0.0
+    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 36.0 %
+
+CHECKPOINT SAVED
+Completed: 42 / 100
+
+--------------------------------------------------------------------------------
+NETWORK 43/100
+--------------------------------------------------------------------------------
+Connections/KC: 5 - 15
+Mean connections/KC: 9.951
+Training sequence: --++---+--+++--++++-
+
+  CONDITION: FULL
+    CS+ PI: 10.66008
+    CS- PI: 4.56009
+    Peak pattern: 16
+    Peak PI: 2.2100257873535156
+    Peak-shift candidate: False
+    Profile range: 12.35012
+    CS similarity: 81.0 %
+
+  CONDITION: PN_KC_FIXED
+    CS+ PI: 11.65012
+    CS- PI: -21.49997
+    Peak pattern: 69
+    Peak PI: 2.6500415802001953
+    Peak-shift candidate: False
+    Profile range: 33.15009
+    CS similarity: 34.5 %
+
+  CONDITION: KC_EN_FIXED
+    CS+ PI: -0.0
+    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 81.0 %
+
+  CONDITION: NONE
+    CS+ PI: -0.0
+    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 34.5 %
+
+CHECKPOINT SAVED
+Completed: 43 / 100
+
+--------------------------------------------------------------------------------
+NETWORK 44/100
+--------------------------------------------------------------------------------
+Connections/KC: 5 - 15
+Mean connections/KC: 9.978
+Training sequence: ++++-+-----++--++--+
+
+  CONDITION: FULL
+    CS+ PI: 8.56009
+    CS- PI: -1.99994
+    Peak pattern: 25
+    Peak PI: 3.340005874633789
+    Peak-shift candidate: False
+    Profile range: 10.74503
+    CS similarity: 72.0 %
+
+  CONDITION: PN_KC_FIXED
+    CS+ PI: 12.80014
+    CS- PI: -24.24997
+    Peak pattern: 37
+    Peak PI: 3.7500381469726562
+    Peak-shift candidate: False
+    Profile range: 37.05011
+    CS similarity: 32.5 %
+
+  CONDITION: KC_EN_FIXED
+    CS+ PI: -0.0
+    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 72.0 %
+
+  CONDITION: NONE
+    CS+ PI: -0.0
+    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 32.5 %
+
+CHECKPOINT SAVED
+Completed: 44 / 100
+
+--------------------------------------------------------------------------------
+NETWORK 45/100
+--------------------------------------------------------------------------------
+Connections/KC: 5 - 15
+Mean connections/KC: 10.034
+Training sequence: --++-+---+-+++-++--+
+
+  CONDITION: FULL
+    CS+ PI: 10.3351
+    CS- PI: 4.05009
+    Peak pattern: 78
+    Peak PI: 2.610044479370117
+    Peak-shift candidate: False
+    Profile range: 11.0351
+    CS similarity: 79.5 %
+
+  CONDITION: PN_KC_FIXED
+    CS+ PI: 10.55009
+    CS- PI: -23.34997
+    Peak pattern: 36
+    Peak PI: 5.250062942504883
+    Peak-shift candidate: False
+    Profile range: 33.90007
+    CS similarity: 33.5 %
+
+  CONDITION: KC_EN_FIXED
+    CS+ PI: -0.0
+    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 79.5 %
+
+  CONDITION: NONE
+    CS+ PI: -0.0
+    CS- PI: -0.0
+    Peak pattern: 1
+    Peak PI: -0.0
+    Peak-shift candidate: False
+    Profile range: 0.0
+    CS similarity: 33.5 %
+
+CHECKPOINT SAVED
+Completed: 45 / 100
+
+--------------------------------------------------------------------------------
+NETWORK 46/100
+--------------------------------------------------------------------------------
+Connections/KC: 5 - 15
+Mean connections/KC: 10.002
+Training sequence: +-+++-++-+--+---+--+
+
+  CONDITION: FULL
+    CS+ PI: 6.16011
+    CS- PI: -0.59992
+    Peak pattern: 74
+    Peak PI: 2.045011520385742
+    Peak-shift candidate: False
+    Profile range: 7.10001
+    CS similarity: 85.0 %
+
+  CON"
+/content/drive/MyDrive/Honey/GitHub_Honeybee-Drosophila/results/v13_3E_Stimulus_Provenance_Audit.txt,.txt,3,1,POSSIBLE_CALCULATION_SOURCE,10,hamming; jaccard; overlap; active.*overlap; distance,"v13.3E — STIMULUS PROVENANCE / 28-vs-44 AUDIT
+==============================================================================
+Candidate files scanned: 643
+Valid 100x100 continuum files: 1
+Files with Hamming distance 28: 1
+Files with Hamming distance 44: 0
+
+CURRENT v13.3E CONTINUUM
+Path: /content/drive/MyDrive/Honey/Honeybee_Model_v10_3_Validated_Continuum.csv
+CS+ index: 50
+CS- index: 64
+CS+ active: 50
+CS- active: 50
+Hamming distance: 28
+Active overlap: 36
+Jaccard: 0.5625
+Matrix hash: 7a6207dc104413e1a6fa20f4f3fd05dd
+
+HAMMING = 28 FILES
+------------------------------------------------------------------------------
+/content/drive/MyDrive/Honey/Honeybee_Model_v10_3_Validated_Continuum.csv
+
+HAMMING = 44 FILES
+------------------------------------------------------------------------------
+
+AUDIT INTERPRETATION
+------------------------------------------------------------------------------
+The current search identified 28/100 geometry but did not identify a valid 44/100 geometry.
+The older 44/100 figure therefore requires additional source tracing before it can be connected to v13.3E.
+
+[PASS] Stimulus provenance audit completed"
+/content/drive/MyDrive/Colab Notebooks/Untitled94.ipynb,.ipynb,1,1,TEXT_REFERENCE,3,sum\s*\(; !=\s*; distance,"s = (
+    profiles
+    .groupby([""network"", ""condition""])
+    .size()
+)
+
+if not np.all(counts.to_numpy() == 100):
+    raise ValueError(
+        ""Every network-condition must contain exactly 100 stimuli.""
+    )
+
+print(
+    ""\n100 networks × 4 conditions × 100 stimuli: PASS""
+)
+
+
+# =============================================================================
+# 4. RECONSTRUCT CORRECTED GEOMETRY
+# =============================================================================
+
+print(""\n[2] Reconstructing corrected geometry..."")
+
+# The continuum is already encoded in the profile file through
+# distance_from_CS_plus and distance_from_CS_minus.
+
+geom = (
+    profiles[""geometric_candidate""].astype(bool)
+)
+
+# IMPORTANT:
+# We do NOT trust the old geometric_candidate column,
+# because v12.2.16 was generated before the geometry forensic audit.
+#
+# Recalculate from distances.
+
+profiles[""corrected_geometric_candidate""] = (
+    (profiles[""stimulus""] != CS_PLUS) &
+    (profiles[""stimulus""] != CS_MINUS) &
+    (
+        profiles[""distance_from_CS_minus""]
+        >
+        profiles[""distance_from_CS_plus""]
+    )
+)
+
+corrected_counts = (
+    profiles
+    .groupby([""network"", ""condition""])
+    [""corrected_geometric_candidate""]
+    .sum()
+)
+
+print(
+    ""Corrected geometric candidate count:"",
+    corrected_counts.unique()
+)
+
+if not np.all(
+    corrected_counts.to_numpy() == 44
+):
+    raise ValueError(
+        ""Corrected geometry is not 44 candidates per profile.""
+    )
+
+print(
+    ""Corrected geometry: 44/100 PASS""
+)
+
+
+# =============================================================================
+# 5. PROFILE PIVOT
+# =============================================================================
+
+print(""\n[3] Creating complete profile matrix..."")
+
+profile_matrix = (
+    profiles
+    .pivot_table(
+        index=[""network"", ""condition""],
+        columns=""stimulus"",
+        values=""PI""
+    )
+    .sort_index()
+)
+
+print(
+    ""Profile matrix shape:"",
+    profile_matrix.shape
+)
+
+
+# =============================================================================
+# 6. PROFILE FEATURES
+# =============================================================================
+
+records = []
+
+for network in sorted(
+    profiles[""network""].unique()
+):
+
+    for condition in [
+        ""NONE"",
+        ""PN_KC_ONLY"",
+        ""KC_EN_ONLY"",
+        ""FULL""
+    ]:
+
+        d = profiles[
+            (profiles[""network""] == network) &
+            (profiles[""condition""] == condition)
+        ].sort_values(""stimulus"")
+
+        pi = d[""PI""].to_numpy()
+
+        # -------------------------------------------------------------
+        # Peak
+        # -------------------------------------------------------------
+
+        peak_pos = int(
+            np.argmax(pi)
+        )
+
+        peak_stimulus = (
+            peak_pos + 1
+        )
+
+        peak_pi = float(
+            pi[peak_pos]
+        )
+
+        cs_plus_pi = float(
+            pi[CS_PLUS_IDX]
+        )
+
+        cs_minus_pi = float(
+            pi[CS_MINUS_IDX]
+        )
+
+        # -------------------------------------------------------------
+        # Geometry
+        # -------------------------------------------------------------
+
+        peak_d_plus = int(
+            d.iloc[peak_pos]
+            [""distance_from_CS_plus""]
+        )
+
+        peak_d_minus = int(
+            d.iloc[peak_pos]
+            [""distance_from_CS_minus""]
+        )
+
+        distance_advantage = (
+            peak_d_minus -
+            peak_d_plus
+        )
+
+        peak_geometric = (
+            peak_stimulus != CS_PLUS and
+            peak_stimulus != CS_MINUS and
+            peak_d_minus > peak_d_plus
+        )
+
+        strict_shift = (
+            peak_geometric and
+            peak_pi > cs_plus_pi
+        )
+
+        # -------------------------------------------------------------
+        # Profile statistics
+        # -------------------------------------------------------------
+
+        profile_range = float(
+            pi.max() - pi.min()
+        )
+
+        mean_pi = flo"

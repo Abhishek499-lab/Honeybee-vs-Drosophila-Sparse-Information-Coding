@@ -1,0 +1,5 @@
+condition,N,mean_CS_plus_PI,mean_CS_minus_PI,mean_peak_PI,mean_profile_range,geometric_peak_percent,strict_peak_shift_percent,mean_peak_distance_CS_plus,mean_peak_distance_CS_minus,mean_distance_advantage,mean_CS_similarity,mean_changed_PN_KC_percent
+NONE,100,0.0,0.0,0.0,0.0,0.0,0.0,49.0,36.0,-13.0,34.98,0.0
+PN_KC_ONLY,100,0.0,0.0,0.0,0.0,0.0,0.0,49.0,36.0,-13.0,61.025,5.49171
+KC_EN_ONLY,100,16.007985601425172,-29.50600923538208,16.007985601425172,45.51399483680725,0.0,0.0,0.0,14.0,14.0,34.98,0.0
+FULL,100,6.363132610321045,-3.234810437262058,6.856335639953613,10.095745839476585,100.0,100.0,3.88,15.69,11.81,61.025,5.49171

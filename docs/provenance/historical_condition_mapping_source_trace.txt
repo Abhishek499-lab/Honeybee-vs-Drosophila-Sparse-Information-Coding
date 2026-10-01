@@ -1,0 +1,690 @@
+HISTORICAL CONDITION MAPPING SOURCE TRACE
+===========================================================================
+
+CELL 2, LINE 4: # FULL RESPONSE-PROFILE MECHANISTIC DECOMPOSITION
+CELL 2, LINE 10: #   1. NONE
+CELL 2, LINE 13: #   4. FULL
+CELL 2, LINE 109: print("FULL RESPONSE-PROFILE MECHANISTIC DECOMPOSITION")
+CELL 2, LINE 325:     plastic_pn_kc,
+CELL 2, LINE 326:     plastic_kc_en,
+CELL 2, LINE 395:         if plastic_pn_kc:
+CELL 2, LINE 433:         if plastic_kc_en:
+CELL 2, LINE 487:     # FULL PI PROFILE
+CELL 2, LINE 507: # 6. CONDITIONS
+CELL 2, LINE 510: conditions = {
+CELL 2, LINE 511:     "NONE": (False, False),
+CELL 2, LINE 512:     "PN_KC_ONLY": (True, False),
+CELL 2, LINE 513:     "KC_EN_ONLY": (False, True),
+CELL 2, LINE 514:     "FULL": (True, True)
+CELL 2, LINE 527: # 8. RUN 100 NETWORKS × 4 CONDITIONS
+CELL 2, LINE 532: print("Conditions:", list(conditions.keys()))
+CELL 2, LINE 533: print("Total simulations:", N_NETWORKS * len(conditions))
+CELL 2, LINE 542:     # Same connectivity for all four conditions
+CELL 2, LINE 558:     for condition_name, (
+CELL 2, LINE 559:         plastic_pn_kc,
+CELL 2, LINE 560:         plastic_kc_en
+CELL 2, LINE 561:     ) in conditions.items():
+CELL 2, LINE 579:             plastic_pn_kc,
+CELL 2, LINE 580:             plastic_kc_en,
+CELL 2, LINE 645:         if plastic_pn_kc:
+CELL 2, LINE 702:                 "condition": condition_name,
+CELL 2, LINE 735:             "condition": condition_name,
+CELL 2, LINE 737:             "plastic_pn_kc": plastic_pn_kc,
+CELL 2, LINE 739:             "plastic_kc_en": plastic_kc_en,
+CELL 2, LINE 818: condition_records = []
+CELL 2, LINE 820: for condition in conditions.keys():
+CELL 2, LINE 823:         network_df["condition"] == condition
+CELL 2, LINE 826:     condition_records.append({
+CELL 2, LINE 828:         "condition": condition,
+CELL 2, LINE 869: condition_df = pd.DataFrame(
+CELL 2, LINE 870:     condition_records
+CELL 2, LINE 885:     condition_a,
+CELL 2, LINE 886:     condition_b
+CELL 2, LINE 891:             network_df["condition"] == condition_a
+CELL 2, LINE 899:             network_df["condition"] == condition_b
+CELL 2, LINE 929:         "condition_A": condition_a,
+CELL 2, LINE 930:         "condition_B": condition_b,
+CELL 2, LINE 961:     ("FULL", "NONE"),
+CELL 2, LINE 962:     ("FULL", "PN_KC_ONLY"),
+CELL 2, LINE 963:     ("FULL", "KC_EN_ONLY"),
+CELL 2, LINE 964:     ("PN_KC_ONLY", "NONE"),
+CELL 2, LINE 965:     ("KC_EN_ONLY", "NONE")
+CELL 2, LINE 993: for condition in conditions.keys():
+CELL 2, LINE 996:         profile_df["condition"] == condition
+CELL 2, LINE 1011:         f"{condition:15s} | "
+CELL 2, LINE 1032: condition_df.to_csv(
+CELL 2, LINE 1047:     condition_df.to_string(
+CELL 3, LINE 4: # FULL RESPONSE-PROFILE MECHANISTIC DECOMPOSITION
+CELL 3, LINE 10: #   1. NONE
+CELL 3, LINE 13: #   4. FULL
+CELL 3, LINE 109: print("FULL RESPONSE-PROFILE MECHANISTIC DECOMPOSITION")
+CELL 3, LINE 325:     plastic_pn_kc,
+CELL 3, LINE 326:     plastic_kc_en,
+CELL 3, LINE 395:         if plastic_pn_kc:
+CELL 3, LINE 433:         if plastic_kc_en:
+CELL 3, LINE 487:     # FULL PI PROFILE
+CELL 3, LINE 507: # 6. CONDITIONS
+CELL 3, LINE 510: conditions = {
+CELL 3, LINE 511:     "NONE": (False, False),
+CELL 3, LINE 512:     "PN_KC_ONLY": (True, False),
+CELL 3, LINE 513:     "KC_EN_ONLY": (False, True),
+CELL 3, LINE 514:     "FULL": (True, True)
+CELL 3, LINE 527: # 8. RUN 100 NETWORKS × 4 CONDITIONS
+CELL 3, LINE 532: print("Conditions:", list(conditions.keys()))
+CELL 3, LINE 533: print("Total simulations:", N_NETWORKS * len(conditions))
+CELL 3, LINE 542:     # Same connectivity for all four conditions
+CELL 3, LINE 558:     for condition_name, (
+CELL 3, LINE 559:         plastic_pn_kc,
+CELL 3, LINE 560:         plastic_kc_en
+CELL 3, LINE 561:     ) in conditions.items():
+CELL 3, LINE 579:             plastic_pn_kc,
+CELL 3, LINE 580:             plastic_kc_en,
+CELL 3, LINE 645:         if plastic_pn_kc:
+CELL 3, LINE 702:                 "condition": condition_name,
+CELL 3, LINE 735:             "condition": condition_name,
+CELL 3, LINE 737:             "plastic_pn_kc": plastic_pn_kc,
+CELL 3, LINE 739:             "plastic_kc_en": plastic_kc_en,
+CELL 3, LINE 818: condition_records = []
+CELL 3, LINE 820: for condition in conditions.keys():
+CELL 3, LINE 823:         network_df["condition"] == condition
+CELL 3, LINE 826:     condition_records.append({
+CELL 3, LINE 828:         "condition": condition,
+CELL 3, LINE 869: condition_df = pd.DataFrame(
+CELL 3, LINE 870:     condition_records
+CELL 3, LINE 885:     condition_a,
+CELL 3, LINE 886:     condition_b
+CELL 3, LINE 891:             network_df["condition"] == condition_a
+CELL 3, LINE 899:             network_df["condition"] == condition_b
+CELL 3, LINE 929:         "condition_A": condition_a,
+CELL 3, LINE 930:         "condition_B": condition_b,
+CELL 3, LINE 961:     ("FULL", "NONE"),
+CELL 3, LINE 962:     ("FULL", "PN_KC_ONLY"),
+CELL 3, LINE 963:     ("FULL", "KC_EN_ONLY"),
+CELL 3, LINE 964:     ("PN_KC_ONLY", "NONE"),
+CELL 3, LINE 965:     ("KC_EN_ONLY", "NONE")
+CELL 3, LINE 993: for condition in conditions.keys():
+CELL 3, LINE 996:         profile_df["condition"] == condition
+CELL 3, LINE 1011:         f"{condition:15s} | "
+CELL 3, LINE 1032: condition_df.to_csv(
+CELL 3, LINE 1047:     condition_df.to_string(
+CELL 4, LINE 19: #   NONE
+CELL 4, LINE 20: #   PN_KC_ONLY
+CELL 4, LINE 21: #   KC_EN_ONLY
+CELL 4, LINE 22: #   FULL
+CELL 4, LINE 125: expected_conditions = {
+CELL 4, LINE 126:     "NONE",
+CELL 4, LINE 127:     "PN_KC_ONLY",
+CELL 4, LINE 128:     "KC_EN_ONLY",
+CELL 4, LINE 129:     "FULL"
+CELL 4, LINE 132: actual_conditions = set(
+CELL 4, LINE 133:     profiles["condition"].unique()
+CELL 4, LINE 136: if actual_conditions != expected_conditions:
+CELL 4, LINE 138:         f"Unexpected conditions: {actual_conditions}"
+CELL 4, LINE 150:     .groupby(["network", "condition"])
+CELL 4, LINE 156:         "Every network-condition must contain exactly 100 stimuli."
+CELL 4, LINE 160:     "\n100 networks × 4 conditions × 100 stimuli: PASS"
+CELL 4, LINE 195:     .groupby(["network", "condition"])
+CELL 4, LINE 226:         index=["network", "condition"],
+CELL 4, LINE 249:     for condition in [
+CELL 4, LINE 250:         "NONE",
+CELL 4, LINE 251:         "PN_KC_ONLY",
+CELL 4, LINE 252:         "KC_EN_ONLY",
+CELL 4, LINE 253:         "FULL"
+CELL 4, LINE 258:             (profiles["condition"] == condition)
+CELL 4, LINE 366:             "condition": condition,
+CELL 4, LINE 417: condition_records = []
+CELL 4, LINE 419: for condition in [
+CELL 4, LINE 420:     "NONE",
+CELL 4, LINE 421:     "PN_KC_ONLY",
+CELL 4, LINE 422:     "KC_EN_ONLY",
+CELL 4, LINE 423:     "FULL"
+CELL 4, LINE 427:         analysis_df["condition"] == condition
+CELL 4, LINE 430:     condition_records.append({
+CELL 4, LINE 432:         "condition": condition,
+CELL 4, LINE 469: condition_summary = pd.DataFrame(
+CELL 4, LINE 470:     condition_records
+CELL 4, LINE 474:     condition_summary.to_string(
+CELL 4, LINE 491:     condition_a,
+CELL 4, LINE 492:     condition_b
+CELL 4, LINE 497:             analysis_df["condition"] == condition_a
+CELL 4, LINE 506:             analysis_df["condition"] == condition_b
+CELL 4, LINE 561:         "A": condition_a,
+CELL 4, LINE 562:         "B": condition_b,
+CELL 4, LINE 614:     ("FULL", "NONE"),
+CELL 4, LINE 616:     ("FULL", "PN_KC_ONLY"),
+CELL 4, LINE 618:     ("FULL", "KC_EN_ONLY"),
+CELL 4, LINE 620:     ("PN_KC_ONLY", "NONE"),
+CELL 4, LINE 622:     ("KC_EN_ONLY", "NONE")
+CELL 4, LINE 626: for condition_a, condition_b in comparisons:
+CELL 4, LINE 633:                 condition_a,
+CELL 4, LINE 634:                 condition_b
+CELL 4, LINE 650: # Does FULL resemble KC-EN-only?
+CELL 4, LINE 668:     for condition in [
+CELL 4, LINE 669:         "NONE",
+CELL 4, LINE 670:         "PN_KC_ONLY",
+CELL 4, LINE 671:         "KC_EN_ONLY",
+CELL 4, LINE 672:         "FULL"
+CELL 4, LINE 675:         profiles_this[condition] = (
+CELL 4, LINE 678:                 (network, condition)
+CELL 4, LINE 685:         ("FULL", "KC_EN_ONLY"),
+CELL 4, LINE 687:         ("FULL", "PN_KC_ONLY"),
+CELL 4, LINE 689:         ("FULL", "NONE"),
+CELL 4, LINE 691:         ("KC_EN_ONLY", "NONE")
+CELL 4, LINE 718:             "condition_A": a,
+CELL 4, LINE 720:             "condition_B": b,
+CELL 4, LINE 741:             "condition_A",
+CELL 4, LINE 742:             "condition_B"
+CELL 4, LINE 773: for condition in [
+CELL 4, LINE 774:     "NONE",
+CELL 4, LINE 775:     "PN_KC_ONLY",
+CELL 4, LINE 776:     "KC_EN_ONLY",
+CELL 4, LINE 777:     "FULL"
+CELL 4, LINE 781:         profiles["condition"] == condition
+CELL 4, LINE 800:             "condition": condition,
+CELL 4, LINE 832: # 12. DIRECT FULL − KC-EN DIFFERENCE
+CELL 4, LINE 839: #     FULL ≈ KC-EN-only
+CELL 4, LINE 843: # If FULL − KC-EN has systematic geometry-dependent structure,
+CELL 4, LINE 848: print("\n[7] FULL minus KC-EN-only profile decomposition")
+CELL 4, LINE 859:         .loc[(network, "FULL")]
+CELL 4, LINE 865:         .loc[(network, "KC_EN_ONLY")]
+CELL 4, LINE 871:         .loc[(network, "PN_KC_ONLY")]
+CELL 4, LINE 877:         .loc[(network, "NONE")]
+CELL 4, LINE 904:             "FULL":
+CELL 4, LINE 907:             "KC_EN_ONLY":
+CELL 4, LINE 910:             "PN_KC_ONLY":
+CELL 4, LINE 913:             "NONE":
+CELL 4, LINE 916:             "FULL_minus_KC_EN_ONLY":
+CELL 4, LINE 919:             "FULL_minus_PN_KC_ONLY":
+CELL 4, LINE 969:     ["FULL_minus_KC_EN_ONLY"]
+CELL 4, LINE 976:     ["FULL_minus_KC_EN_ONLY"]
+CELL 4, LINE 980:     "Geometric candidate mean FULL-KC_EN:",
+CELL 4, LINE 985:     "Non-geometric mean FULL-KC_EN:",
+CELL 4, LINE 1006: condition_summary.to_csv(
+CELL 4, LINE 1041:     condition_summary[
+CELL 4, LINE 1043:             "condition",
+CELL 5, LINE 1:     "KC_EN_ONLY_geometric_peak_percent":
+CELL 7, LINE 15: #   FULL-model peak geometry
+CELL 7, LINE 106:     network["condition"].unique()
+CELL 7, LINE 129:     "condition",
+CELL 7, LINE 184: # 5. SELECT FULL CONDITION
+CELL 7, LINE 188:     "\n[3] Selecting FULL condition..."
+CELL 7, LINE 192:     network["condition"] == "FULL"
+CELL 7, LINE 198:         f"Expected 100 FULL networks, found {len(full_network)}"
+CELL 7, LINE 202:     "FULL networks:",
+CELL 7, LINE 313:     "FULL_peak_displacement"
+CELL 7, LINE 329:     "FULL_distance_advantage"
+CELL 7, LINE 358:     "FULL_peak_displacement",
+CELL 7, LINE 362:     "FULL_distance_advantage",
+CELL 7, LINE 502:             "FULL_peak_displacement"
+CELL 7, LINE 505:         "Learned CS similarity → FULL peak displacement"
+CELL 7, LINE 518:             "FULL_peak_displacement"
+CELL 7, LINE 521:         "Learned CS overlap → FULL peak displacement"
+CELL 7, LINE 574:             "FULL_distance_advantage"
+CELL 7, LINE 577:         "Learned CS similarity → FULL distance advantage"
+CELL 7, LINE 590:             "FULL_distance_advantage"
+CELL 7, LINE 593:         "Learned CS overlap → FULL distance advantage"
+CELL 7, LINE 750:             "FULL_peak_displacement",
+CELL 7, LINE 754:             "FULL_distance_advantage",
+CELL 7, LINE 801:             "FULL_peak_displacement"
+CELL 7, LINE 804:             "FULL_peak_displacement"
+CELL 7, LINE 811:             "FULL_distance_advantage"
+CELL 7, LINE 814:             "FULL_distance_advantage"
+CELL 7, LINE 899:             "Mean FULL peak displacement",
+CELL 7, LINE 903:                 "FULL_peak_displacement"
+CELL 7, LINE 919:             "Mean FULL distance advantage",
+CELL 7, LINE 923:                 "FULL_distance_advantage"
+CELL 8, LINE 16: #   local response geometry around the FULL-model peak?
+CELL 8, LINE 134:     "condition",
+CELL 8, LINE 197: for condition in [
+CELL 8, LINE 198:     "NONE",
+CELL 8, LINE 199:     "PN_KC_ONLY",
+CELL 8, LINE 200:     "KC_EN_ONLY",
+CELL 8, LINE 201:     "FULL"
+CELL 8, LINE 205:         profiles["condition"] == condition
+CELL 8, LINE 224:             f"{condition} matrix has shape "
+CELL 8, LINE 228:     matrices[condition] = pivot.to_numpy(
+CELL 8, LINE 233:         condition,
+CELL 8, LINE 404:         "FULL"
+CELL 8, LINE 408:         "KC_EN_ONLY"
+CELL 8, LINE 412:     # FULL peak
+CELL 8, LINE 436:     # Local metrics around FULL peak
+CELL 8, LINE 493:     # At FULL peak stimulus:
+CELL 8, LINE 541:         "FULL_peak_stimulus":
+CELL 8, LINE 547:         "FULL_peak_distance_CS_plus":
+CELL 8, LINE 561:         "FULL_peak_PI":
+CELL 8, LINE 571:         "FULL_CS_plus_PI":
+CELL 8, LINE 577:         "FULL_peak_minus_CS_plus":
+CELL 8, LINE 583:         "FULL_local_prominence":
+CELL 8, LINE 588:         "FULL_local_asymmetry":
+CELL 8, LINE 593:         "FULL_local_width_signal":
+CELL 8, LINE 598:         "FULL_local_curvature":
+CELL 8, LINE 623:         "PN_KC_effect_at_FULL_peak":
+CELL 8, LINE 632:         "FULL_peak_to_CS_ratio":
+CELL 8, LINE 652:     "FULL_local_prominence",
+CELL 8, LINE 654:     "FULL_local_asymmetry",
+CELL 8, LINE 656:     "FULL_local_width_signal",
+CELL 8, LINE 658:     "FULL_local_curvature",
+CELL 8, LINE 660:     "PN_KC_effect_at_FULL_peak",
+CELL 8, LINE 666:     "FULL_peak_minus_CS_plus"
+CELL 8, LINE 813:     "FULL_peak_distance_CS_plus"
+CELL 8, LINE 819:     "FULL_local_prominence",
+CELL 8, LINE 821:     "FULL_local_asymmetry",
+CELL 8, LINE 823:     "FULL_local_width_signal",
+CELL 8, LINE 825:     "FULL_local_curvature",
+CELL 8, LINE 827:     "PN_KC_effect_at_FULL_peak",
+CELL 8, LINE 833:     "FULL_peak_minus_CS_plus"
+CELL 8, LINE 846:             " → FULL peak displacement"
+CELL 8, LINE 869: # PN-KC effect at FULL peak
+CELL 8, LINE 981:     "\n[8] FULL peak local prominence"
+CELL 8, LINE 985:     "FULL_local_prominence"
+CELL 8, LINE 1047:     "\nMean FULL peak displacement:",
+CELL 8, LINE 1049:         "FULL_peak_distance_CS_plus"
+CELL 8, LINE 1056:         "FULL_local_prominence"
+CELL 9, LINE 124:     "condition",
+CELL 9, LINE 142: conditions = [
+CELL 9, LINE 143:     "NONE",
+CELL 9, LINE 144:     "PN_KC_ONLY",
+CELL 9, LINE 145:     "KC_EN_ONLY",
+CELL 9, LINE 146:     "FULL"
+CELL 9, LINE 151: for condition in conditions:
+CELL 9, LINE 154:         profiles["condition"] == condition
+CELL 9, LINE 166:         condition,
+CELL 9, LINE 170:     profile_matrices[condition] = (
+CELL 9, LINE 175:         condition,
+CELL 9, LINE 176:         profile_matrices[condition].shape,
+CELL 9, LINE 184: # FULL:
+CELL 9, LINE 187: # KC_EN_ONLY:
+CELL 9, LINE 193: #     FULL - KC_EN_ONLY
+CELL 9, LINE 199: FULL = profile_matrices["FULL"]
+CELL 9, LINE 200: KC_EN = profile_matrices["KC_EN_ONLY"]
+CELL 9, LINE 202: PNKC_EFFECT = FULL - KC_EN
+CELL 9, LINE 212: full_peak_idx = np.argmax(FULL, axis=1)
+CELL 9, LINE 229:     # PN-KC effect at FULL peak
+CELL 9, LINE 247:     # Geometry of FULL peak
+CELL 9, LINE 273:     # Did FULL peak move geometrically toward CS+?
+CELL 9, LINE 296:         "FULL_peak_stimulus":
+CELL 9, LINE 299:         "KC_EN_ONLY_peak_stimulus":
+CELL 9, LINE 305:         "FULL_peak_distance_CSplus":
+CELL 9, LINE 308:         "KC_EN_ONLY_peak_distance_CSplus":
+CELL 9, LINE 315:         "FULL_peak_distance_CSminus":
+CELL 9, LINE 318:         "KC_EN_ONLY_peak_distance_CSminus":
+CELL 9, LINE 321:         "FULL_peak_distance_advantage":
+CELL 9, LINE 324:         "KC_EN_ONLY_peak_distance_advantage":
+CELL 9, LINE 331:         "FULL_peak_geometric_candidate":
+CELL 9, LINE 334:         "KC_EN_ONLY_peak_geometric_candidate":
+CELL 9, LINE 337:         "PNKC_effect_at_FULL_peak":
+CELL 9, LINE 392:             "FULL_PI":
+CELL 9, LINE 393:                 float(FULL[n, s]),
+CELL 9, LINE 395:             "KC_EN_ONLY_PI":
+CELL 9, LINE 413:             "is_FULL_peak":
+CELL 9, LINE 432:     "PNKC_effect_at_FULL_peak"
+CELL 9, LINE 485:     "FULL_peak_distance_CSplus"
+CELL 9, LINE 489:     "KC_EN_ONLY_peak_distance_CSplus"
+CELL 9, LINE 532:     "FULL_peak_distance_CSplus"
+CELL 9, LINE 551: #   observed = PN-KC effect at FULL peak
+CELL 9, LINE 794:         "FULL_geometric_peaks",
+CELL 9, LINE 796:         "mean_PNKC_effect_at_FULL_peak",
+CELL 9, LINE 861:                 "FULL_peak_geometric_candidate"
+CELL 9, LINE 945:     "FULL geometric peaks:",
+CELL 9, LINE 948:             "FULL_peak_geometric_candidate"
+CELL 9, LINE 955:     "\nMean PN-KC effect at FULL peak:",
+CELL 9, LINE 1067:     "\nSame peak FULL vs KC_EN_ONLY:",
+CELL 10, LINE 17: # FULL(s)       = learned PN-KC + learned KC-EN
+CELL 10, LINE 18: # KC_EN_ONLY(s) = baseline PN-KC + learned KC-EN
+CELL 10, LINE 23: #       = FULL(s) - KC_EN_ONLY(s)
+CELL 10, LINE 157:     "condition",
+CELL 10, LINE 175: conditions = [
+CELL 10, LINE 176:     "NONE",
+CELL 10, LINE 177:     "PN_KC_ONLY",
+CELL 10, LINE 178:     "KC_EN_ONLY",
+CELL 10, LINE 179:     "FULL"
+CELL 10, LINE 184: for condition in conditions:
+CELL 10, LINE 187:         profiles["condition"] == condition
+CELL 10, LINE 200:     matrices[condition] = (
+CELL 10, LINE 205:         condition,
+CELL 10, LINE 206:         matrices[condition].shape,
+CELL 10, LINE 210: NONE = matrices["NONE"]
+CELL 10, LINE 211: PNKC_ONLY = matrices["PN_KC_ONLY"]
+CELL 10, LINE 212: KC_EN_ONLY = matrices["KC_EN_ONLY"]
+CELL 10, LINE 213: FULL = matrices["FULL"]
+CELL 10, LINE 222:     FULL - KC_EN_ONLY
+CELL 10, LINE 233: # FULL - KC_EN_ONLY
+CELL 10, LINE 242: reconstructed_FULL = (
+CELL 10, LINE 243:     KC_EN_ONLY
+CELL 10, LINE 250:         reconstructed_FULL - FULL
+CELL 10, LINE 270:     FULL,
+CELL 10, LINE 275:     KC_EN_ONLY,
+CELL 10, LINE 304:             "FULL_PI":
+CELL 10, LINE 305:                 float(FULL[n, idx]),
+CELL 10, LINE 307:             "KC_EN_ONLY_PI":
+CELL 10, LINE 308:                 float(KC_EN_ONLY[n, idx]),
+CELL 10, LINE 313:             "NONE_PI":
+CELL 10, LINE 314:                 float(NONE[n, idx]),
+CELL 10, LINE 336:             "is_FULL_peak":
+CELL 10, LINE 362:     full_peak_pi = FULL[n, fp]
+CELL 10, LINE 363:     kc_peak_pi = KC_EN_ONLY[n, kp]
+CELL 10, LINE 459:     # Geometry of FULL peak
+CELL 10, LINE 517:         "FULL_peak_stimulus":
+CELL 10, LINE 529:         "FULL_peak_PI":
+CELL 10, LINE 535:         "PNKC_at_FULL_peak":
+CELL 10, LINE 580:         "FULL_peak_distance_CSplus":
+CELL 10, LINE 583:         "FULL_peak_distance_CSminus":
+CELL 10, LINE 586:         "FULL_peak_distance_advantage":
+CELL 10, LINE 596:         "FULL_peak_geometric_candidate":
+CELL 10, LINE 626:         "FULL_peak_distance_CSplus"
+CELL 10, LINE 636:     "Mean FULL peak distance from CS+:",
+CELL 10, LINE 676: # [12] DOES PN-KC CONTRIBUTION PEAK NEAR THE FULL PEAK?
+CELL 10, LINE 681:         "PNKC_at_FULL_peak"
+CELL 10, LINE 776: # [15] CS+ / CS- / FULL PEAK PROFILE COMPARISON
+CELL 10, LINE 779: print("\n[15] CS+ / CS- / FULL peak comparison...")
+CELL 10, LINE 813: # [16] CORRELATION OF PN-KC EFFECT WITH FULL PI
+CELL 10, LINE 816: print("\n[16] PN-KC contribution vs FULL response...")
+CELL 10, LINE 819:     "FULL_PI"
+CELL 10, LINE 848:             "FULL_geometric_peaks",
+CELL 10, LINE 853:                     "FULL_peak_geometric_candidate"
+CELL 10, LINE 880:             "mean_FULL_peak_distance_CSplus",
+CELL 10, LINE 928:             "PNKC_at_FULL_peak_mean",
+CELL 10, LINE 944:             "FULL_peak_vs_KC_EN_peak_t",
+CELL 10, LINE 952:             "FULL_peak_vs_KC_EN_peak_p",
+CELL 10, LINE 960:             "FULL_peak_vs_KC_EN_peak_dz",
+CELL 10, LINE 1048:             "FULL_peak_PNKC_vs_CSplus_t",
+CELL 10, LINE 1056:             "FULL_peak_PNKC_vs_CSplus_p",
+CELL 10, LINE 1064:             "FULL_peak_PNKC_vs_CSminus_t",
+CELL 10, LINE 1072:             "FULL_peak_PNKC_vs_CSminus_p",
+CELL 10, LINE 1096:             "PNKC_contribution_vs_FULL_PI_r",
+CELL 10, LINE 1104:             "PNKC_contribution_vs_FULL_PI_p",
+CELL 10, LINE 1112:             "PNKC_contribution_vs_FULL_PI_spearman",
+CELL 10, LINE 1120:             "PNKC_contribution_vs_FULL_PI_spearman_p",
+CELL 10, LINE 1165:     "FULL geometric peaks:",
+CELL 10, LINE 1168:             "FULL_peak_geometric_candidate"
+CELL 10, LINE 1190:     "Mean FULL peak distance from CS+:",
+CELL 10, LINE 1215:     "\nPN-KC contribution at FULL peak:",
+CELL 10, LINE 1225:     "FULL peak vs KC-EN peak p:",
+CELL 10, LINE 1270:     "\nPN-KC contribution vs FULL response:"
+CELL 11, LINE 132:     "condition",
+CELL 11, LINE 148: conditions = [
+CELL 11, LINE 149:     "NONE",
+CELL 11, LINE 150:     "PN_KC_ONLY",
+CELL 11, LINE 151:     "KC_EN_ONLY",
+CELL 11, LINE 152:     "FULL"
+CELL 11, LINE 157: for condition in conditions:
+CELL 11, LINE 160:         profiles["condition"] == condition
+CELL 11, LINE 173:     matrices[condition] = pivot.to_numpy(
+CELL 11, LINE 178:         condition,
+CELL 11, LINE 179:         matrices[condition].shape,
+CELL 11, LINE 183: NONE = matrices["NONE"]
+CELL 11, LINE 184: PNKC_ONLY = matrices["PN_KC_ONLY"]
+CELL 11, LINE 185: KC_EN_ONLY = matrices["KC_EN_ONLY"]
+CELL 11, LINE 186: FULL = matrices["FULL"]
+CELL 11, LINE 192: # FULL = KC_EN component + PN-KC component
+CELL 11, LINE 196: #       P(s) = FULL(s) - KC_EN_ONLY(s)
+CELL 11, LINE 202: PNKC = FULL - KC_EN_ONLY
+CELL 11, LINE 205: reconstructed = KC_EN_ONLY + PNKC
+CELL 11, LINE 208:     np.abs(reconstructed - FULL)
+CELL 11, LINE 296: # [8] FULL AND KC-EN PEAKS
+CELL 11, LINE 302:     FULL,
+CELL 11, LINE 307:     KC_EN_ONLY,
+CELL 11, LINE 325: PNKC_AT_FULL_PEAK = np.array([
+CELL 11, LINE 343: FULL_PEAK_STIMULUS = (
+CELL 11, LINE 374: # [11] GEOMETRY OF FULL PEAK
+CELL 11, LINE 377: FULL_PEAK_DPLUS = d_plus[
+CELL 11, LINE 381: FULL_PEAK_DMINUS = d_minus[
+CELL 11, LINE 385: FULL_PEAK_ADVANTAGE = (
+CELL 11, LINE 386:     FULL_PEAK_DMINUS
+CELL 11, LINE 388:     FULL_PEAK_DPLUS
+CELL 11, LINE 391: FULL_PEAK_GEOMETRIC = (
+CELL 11, LINE 392:     FULL_PEAK_ADVANTAGE > 0
+CELL 11, LINE 472: # What fraction of the FULL response magnitude is represented by
+CELL 11, LINE 481: PNKC_FRACTION_OF_FULL = (
+CELL 11, LINE 485:         np.abs(FULL)
+CELL 11, LINE 492:     PNKC_FRACTION_OF_FULL,
+CELL 11, LINE 497:     PNKC_FRACTION_OF_FULL,
+CELL 11, LINE 516:         "FULL_peak_stimulus":
+CELL 11, LINE 517:             int(FULL_PEAK_STIMULUS[n]),
+CELL 11, LINE 528:         "FULL_peak_distance_CSplus":
+CELL 11, LINE 529:             int(FULL_PEAK_DPLUS[n]),
+CELL 11, LINE 531:         "FULL_peak_distance_CSminus":
+CELL 11, LINE 532:             int(FULL_PEAK_DMINUS[n]),
+CELL 11, LINE 534:         "FULL_peak_distance_advantage":
+CELL 11, LINE 535:             int(FULL_PEAK_ADVANTAGE[n]),
+CELL 11, LINE 546:         "FULL_peak_geometric":
+CELL 11, LINE 547:             bool(FULL_PEAK_GEOMETRIC[n]),
+CELL 11, LINE 591:         "PNKC_at_FULL_peak":
+CELL 11, LINE 592:             float(PNKC_AT_FULL_PEAK[n]),
+CELL 11, LINE 597:         "PNKC_peak_minus_FULL_peak":
+CELL 11, LINE 601:                 PNKC_AT_FULL_PEAK[n]
+CELL 11, LINE 633:             "FULL_PI":
+CELL 11, LINE 634:                 float(FULL[n, s]),
+CELL 11, LINE 636:             "KC_EN_ONLY_PI":
+CELL 11, LINE 637:                 float(KC_EN_ONLY[n, s]),
+CELL 11, LINE 651:             "PNKC_fraction_of_FULL":
+CELL 11, LINE 656:                         abs(FULL[n, s])
+CELL 11, LINE 680:             "is_FULL_peak":
+CELL 11, LINE 719: # FULL peak vs CS+
+CELL 11, LINE 721:     PNKC_AT_FULL_PEAK,
+CELL 11, LINE 726:     PNKC_AT_FULL_PEAK
+CELL 11, LINE 737: # FULL peak vs KC-EN peak
+CELL 11, LINE 739:     PNKC_AT_FULL_PEAK,
+CELL 11, LINE 744:     PNKC_AT_FULL_PEAK
+CELL 11, LINE 794: # [20] PN-KC MAX VS FULL PEAK LOCATION
+CELL 11, LINE 800:     FULL_PEAK_DPLUS
+CELL 11, LINE 805:     FULL_PEAK_DPLUS
+CELL 11, LINE 830:     ("FULL_geometric_peaks",
+CELL 11, LINE 831:      int(FULL_PEAK_GEOMETRIC.sum())),
+CELL 11, LINE 878:     ("PNKC_at_FULL_peak_mean",
+CELL 11, LINE 879:      PNKC_AT_FULL_PEAK.mean()),
+CELL 11, LINE 884:     ("FULL_peak_vs_CSplus_t",
+CELL 11, LINE 887:     ("FULL_peak_vs_CSplus_p",
+CELL 11, LINE 890:     ("FULL_peak_vs_CSplus_dz",
+CELL 11, LINE 893:     ("FULL_peak_vs_KC_EN_peak_t",
+CELL 11, LINE 896:     ("FULL_peak_vs_KC_EN_peak_p",
+CELL 11, LINE 899:     ("FULL_peak_vs_KC_EN_peak_dz",
+CELL 11, LINE 914:     ("mean_FULL_peak_distance_CSplus",
+CELL 11, LINE 915:      FULL_PEAK_DPLUS.mean()),
+CELL 11, LINE 917:     ("PNKC_max_vs_FULL_peak_distance_t",
+CELL 11, LINE 920:     ("PNKC_max_vs_FULL_peak_distance_p",
+CELL 11, LINE 923:     ("PNKC_max_vs_FULL_peak_distance_dz",
+CELL 11, LINE 1012:     "FULL geometric peaks:",
+CELL 11, LINE 1013:     int(FULL_PEAK_GEOMETRIC.sum()),
+CELL 11, LINE 1062:     "\nPN-KC at FULL peak:",
+CELL 11, LINE 1063:     PNKC_AT_FULL_PEAK.mean()
+CELL 11, LINE 1072:     "FULL peak vs KC-EN peak p:",
+CELL 11, LINE 1108:     "FULL peak distance from CS+:",
+CELL 11, LINE 1109:     FULL_PEAK_DPLUS.mean()
+CELL 11, LINE 1142:     "\nMean PN-KC fraction of FULL response:",
+CELL 12, LINE 9: # At the FULL learned peak, what actually creates the response?
+CELL 12, LINE 11: #   FULL(s) = KC_EN(s) + PN_KC(s)
+CELL 12, LINE 20: #   FULL(s) - FULL(CS+)
+CELL 12, LINE 160:     "condition",
+CELL 12, LINE 182: for condition in [
+CELL 12, LINE 183:     "NONE",
+CELL 12, LINE 184:     "PN_KC_ONLY",
+CELL 12, LINE 185:     "KC_EN_ONLY",
+CELL 12, LINE 186:     "FULL"
+CELL 12, LINE 190:         profiles["condition"] == condition
+CELL 12, LINE 203:     matrices[condition] = pivot.to_numpy(
+CELL 12, LINE 208:         condition,
+CELL 12, LINE 209:         matrices[condition].shape,
+CELL 12, LINE 213: NONE = matrices["NONE"]
+CELL 12, LINE 214: PNKC_ONLY = matrices["PN_KC_ONLY"]
+CELL 12, LINE 215: KC_EN = matrices["KC_EN_ONLY"]
+CELL 12, LINE 216: FULL = matrices["FULL"]
+CELL 12, LINE 225: PNKC = FULL - KC_EN
+CELL 12, LINE 232:         reconstructed - FULL
+CELL 12, LINE 255: F_CS = FULL[:, cs_idx]
+CELL 12, LINE 287:     FULL
+CELL 12, LINE 308: # [8] IDENTIFY FULL PEAK
+CELL 12, LINE 311: print("\n[8] Identifying FULL peaks...")
+CELL 12, LINE 314:     FULL,
+CELL 12, LINE 323: # [9] COMPONENT VALUES AT FULL PEAK
+CELL 12, LINE 326: print("\n[9] Extracting component values at FULL peak...")
+CELL 12, LINE 339:     FULL[n, full_peak_idx[n]]
+CELL 12, LINE 501:             "FULL_PI":
+CELL 12, LINE 502:                 float(FULL[n, s]),
+CELL 12, LINE 510:             "FULL_relative_to_CSplus":
+CELL 12, LINE 537:             "is_FULL_peak":
+CELL 12, LINE 581:         "FULL_peak_stimulus":
+CELL 12, LINE 584:         "FULL_peak_PI":
+CELL 12, LINE 587:         "KC_EN_at_FULL_peak":
+CELL 12, LINE 590:         "PNKC_at_FULL_peak":
+CELL 12, LINE 593:         "FULL_peak_elevation_vs_CSplus":
+CELL 12, LINE 613:         "FULL_peak_distance_CSplus":
+CELL 12, LINE 616:         "FULL_peak_distance_CSminus":
+CELL 12, LINE 619:         "FULL_peak_distance_advantage":
+CELL 12, LINE 622:         "FULL_peak_geometric":
+CELL 12, LINE 733: # FULL
+CELL 12, LINE 791:     "FULL_peak_distance_CSplus"
+CELL 12, LINE 863:     ("FULL_geometric_peaks",
+CELL 12, LINE 864:      int(FULL_PEAK_GEOMETRIC.sum())
+CELL 12, LINE 865:      if "FULL_PEAK_GEOMETRIC" in globals()
+CELL 12, LINE 874:     ("mean_FULL_peak_PI",
+CELL 12, LINE 877:     ("mean_FULL_peak_elevation_vs_CSplus",
+CELL 12, LINE 886:     ("FULL_peak_elevation_t",
+CELL 12, LINE 889:     ("FULL_peak_elevation_p",
+CELL 12, LINE 892:     ("FULL_peak_elevation_dz",
+CELL 12, LINE 1040:     "FULL geometric peaks:",
+CELL 12, LINE 1052:     "\nFULL peak elevation vs CS+:",
+CELL 13, LINE 849: # 15. INDEPENDENT FULL PEAK GEOMETRY CHECK
+CELL 13, LINE 852: print("\n[13] Independently checking FULL peak geometry...")
+CELL 13, LINE 856:     "FULL_peak_stimulus",
+CELL 13, LINE 857:     "FULL_peak_distance_CSplus",
+CELL 13, LINE 858:     "FULL_peak_distance_CSminus",
+CELL 13, LINE 859:     "FULL_peak_distance_advantage",
+CELL 13, LINE 860:     "FULL_peak_geometric",
+CELL 13, LINE 861:     "KC_EN_at_FULL_peak",
+CELL 13, LINE 863:     "delta_KC_EN_at_FULL_peak",
+CELL 13, LINE 864:     "PNKC_at_FULL_peak",
+CELL 13, LINE 866:     "delta_PNKC_at_FULL_peak",
+CELL 13, LINE 867:     "delta_FULL_at_FULL_peak"
+CELL 13, LINE 887:         "FULL_peak_stimulus"
+CELL 13, LINE 911:         "FULL_peak_geometric"
+CELL 13, LINE 922:     "Independent vs reported FULL peak geometry mismatches:",
+CELL 13, LINE 929:         "FULL peak geometry mismatch detected."
+CELL 13, LINE 933:     "FULL peak geometry: PASS"
+CELL 13, LINE 945:         "FULL_peak_distance_CSplus"
+CELL 13, LINE 951:         "FULL_peak_distance_CSminus"
+CELL 13, LINE 957:         "FULL_peak_distance_advantage"
+CELL 13, LINE 1029:         "KC_EN_at_FULL_peak"
+CELL 13, LINE 1041:         "PNKC_at_FULL_peak"
+CELL 13, LINE 1053:         "delta_KC_EN_at_FULL_peak"
+CELL 13, LINE 1059:         "delta_PNKC_at_FULL_peak"
+CELL 13, LINE 1065:         "delta_FULL_at_FULL_peak"
+CELL 13, LINE 1122:     "FULL relative reconstruction error:",
+CELL 13, LINE 1328:         "FULL_geometric_peaks",
+CELL 13, LINE 1330:         "mean_FULL_peak_stimulus",
+CELL 13, LINE 1331:         "mean_FULL_peak_shift",
+CELL 13, LINE 1333:         "mean_FULL_peak_distance_CSplus",
+CELL 13, LINE 1334:         "mean_FULL_peak_distance_CSminus",
+CELL 13, LINE 1335:         "mean_FULL_peak_distance_advantage",
+CELL 13, LINE 1337:         "mean_delta_KC_EN_at_FULL_peak",
+CELL 13, LINE 1338:         "mean_delta_PNKC_at_FULL_peak",
+CELL 13, LINE 1339:         "mean_delta_FULL_at_FULL_peak",
+CELL 13, LINE 1614: print("\nFULL PEAK GEOMETRY")
+CELL 13, LINE 1618:     "Geometric FULL peaks:",
+CELL 13, LINE 1685:     "Mean ΔFULL:",
+CELL 13, LINE 1710:     "FULL peak geometry:",
+CELL 14, LINE 11: # Does the signed PN-KC-dependent component explain WHERE the FULL peak occurs?
+CELL 14, LINE 24: # at the FULL peak compared with geometrically matched non-peak stimuli.
+CELL 14, LINE 286:     "FULL_peak_stimulus",
+CELL 14, LINE 287:     "FULL_peak_PI",
+CELL 14, LINE 288:     "FULL_peak_distance_CSplus",
+CELL 14, LINE 289:     "FULL_peak_distance_CSminus",
+CELL 14, LINE 290:     "FULL_peak_distance_advantage",
+CELL 14, LINE 291:     "FULL_peak_geometric",
+CELL 14, LINE 292:     "KC_EN_at_FULL_peak",
+CELL 14, LINE 294:     "delta_KC_EN_at_FULL_peak",
+CELL 14, LINE 295:     "PNKC_at_FULL_peak",
+CELL 14, LINE 297:     "delta_PNKC_at_FULL_peak",
+CELL 14, LINE 298:     "delta_FULL_at_FULL_peak"
+CELL 14, LINE 309:     "FULL",
+CELL 14, LINE 312:     "delta_FULL"
+CELL 14, LINE 350: network["FULL_peak_stimulus"] = network[
+CELL 14, LINE 351:     "FULL_peak_stimulus"
+CELL 14, LINE 367:     "FULL",
+CELL 14, LINE 370:     "delta_FULL"
+CELL 14, LINE 492: # 11. BUILD FULL RESPONSE MATRIX
+CELL 14, LINE 495: print("\n[7] Building FULL response matrix...")
+CELL 14, LINE 497: FULL = (
+CELL 14, LINE 502:         values="FULL"
+CELL 14, LINE 551:     "FULL:",
+CELL 14, LINE 552:     FULL.shape
+CELL 14, LINE 567: # 12. IDENTIFY FULL PEAKS INDEPENDENTLY
+CELL 14, LINE 570: print("\n[8] Identifying FULL peaks independently...")
+CELL 14, LINE 573:     FULL,
+CELL 14, LINE 584:         "FULL_peak_stimulus"
+CELL 14, LINE 604:         "FULL peak reconstruction mismatch."
+CELL 14, LINE 608:     "FULL peak identification: PASS"
+CELL 14, LINE 613: # 13. EXTRACT FULL-PEAK COMPONENT VALUES
+CELL 14, LINE 616: print("\n[9] Extracting component values at FULL peaks...")
+CELL 14, LINE 637:     FULL[
+CELL 14, LINE 658:     FULL[
+CELL 14, LINE 707: # PN-KC COMPONENT AT FULL PEAK VS CS+
+CELL 14, LINE 710: print("\n[10] Test 1 — PN-KC component at FULL peak vs CS+...")
+CELL 14, LINE 753: # PN-KC COMPONENT AT FULL PEAK VS KC-EN PEAK
+CELL 14, LINE 756: print("\n[11] Test 2 — PN-KC component at FULL peak vs KC-EN peak...")
+CELL 14, LINE 793:     "Mean PN-KC at FULL peak:",
+CELL 14, LINE 897: # PN-KC MAXIMUM VS FULL PEAK DISTANCE
+CELL 14, LINE 900: print("\n[13] Test 4 — PN-KC maximum vs FULL peak location...")
+CELL 14, LINE 921:     "Mean distance(PN-KC max) - distance(FULL peak) from CS+:",
+CELL 14, LINE 933: print("\n[14] Test 5 — PN-KC contribution vs FULL peak geometry...")
+CELL 14, LINE 964:     "ΔPN-KC vs FULL peak distance from CS+:"
+CELL 14, LINE 982:     "\nΔPN-KC vs FULL distance advantage:"
+CELL 14, LINE 1005: # For each network's FULL peak:
+CELL 14, LINE 1011: # Then compare PN-KC contribution at the actual FULL peak
+CELL 14, LINE 1084:         "FULL_peak_stimulus":
+CELL 14, LINE 1095:         "PNKC_at_FULL_peak":
+CELL 14, LINE 1131:         "PNKC_at_FULL_peak"
+CELL 14, LINE 1153:             "PNKC_at_FULL_peak"
+CELL 14, LINE 1206: # IS THE FULL PEAK ITSELF PN-KC MAXIMUM?
+CELL 14, LINE 1209: print("\n[16] Test 7 — FULL peak equals PN-KC maximum...")
+CELL 14, LINE 1218:     "FULL peak = PN-KC maximum:",
+CELL 14, LINE 1242: # FULL PEAK VS PN-KC MAXIMUM — DIRECTION
+CELL 14, LINE 1245: print("\n[17] Test 8 — Relative ordering of component and FULL peaks...")
+CELL 14, LINE 1277:     "PN-KC maximum farther from CS+ than FULL peak:",
+CELL 14, LINE 1284:     "PN-KC maximum closer to CS+ than FULL peak:",
+CELL 14, LINE 1320:     profile["delta_FULL"].to_numpy(),
+CELL 14, LINE 1343:     "ΔFULL vs closeness to CS+:",
+CELL 14, LINE 1410:     "FULL_peak_stimulus":
+CELL 14, LINE 1419:     "FULL_peak_distance_CSplus":
+CELL 14, LINE 1422:     "FULL_peak_distance_CSminus":
+CELL 14, LINE 1425:     "FULL_peak_distance_advantage":
+CELL 14, LINE 1441:     "PNKC_at_FULL_peak":
+CELL 14, LINE 1447:     "delta_PNKC_at_FULL_peak":
+CELL 14, LINE 1450:     "KC_EN_at_FULL_peak":
+CELL 14, LINE 1456:     "delta_KC_EN_at_FULL_peak":
+CELL 14, LINE 1459:     "FULL_at_peak":
+CELL 14, LINE 1462:     "FULL_at_CSplus":
+CELL 14, LINE 1465:     "delta_FULL_at_peak":
+CELL 14, LINE 1468:     "FULL_peak_equals_PNKC_max":
+CELL 14, LINE 1471:     "PNKC_max_minus_FULL_peak_distance_CSplus":
+CELL 14, LINE 1492:         "FULL_geometric_peaks",
+CELL 14, LINE 1494:         "mean_FULL_peak_stimulus",
+CELL 14, LINE 1496:         "mean_FULL_peak_distance_CSplus",
+CELL 14, LINE 1498:         "mean_FULL_peak_distance_CSminus",
+CELL 14, LINE 1500:         "mean_FULL_peak_distance_advantage",
+CELL 14, LINE 1502:         "mean_delta_PNKC_at_FULL_peak",
+CELL 14, LINE 1504:         "mean_delta_KC_EN_at_FULL_peak",
+CELL 14, LINE 1506:         "mean_delta_FULL_at_FULL_peak",
+CELL 14, LINE 1514:         "PNKC_at_FULLpeak_vs_KCENpeak_t",
+CELL 14, LINE 1516:         "PNKC_at_FULLpeak_vs_KCENpeak_p",
+CELL 14, LINE 1518:         "PNKC_at_FULLpeak_vs_KCENpeak_Cohens_dz",
+CELL 14, LINE 1520:         "PNKC_vs_FULLpeak_distance_Pearson_r",
+CELL 14, LINE 1522:         "PNKC_vs_FULLpeak_distance_Pearson_p",
+CELL 14, LINE 1524:         "PNKC_vs_FULLpeak_distance_Spearman_rho",
+CELL 14, LINE 1526:         "PNKC_vs_FULLpeak_distance_Spearman_p",
+CELL 14, LINE 1528:         "PNKC_vs_FULL_distance_advantage_Pearson_r",
+CELL 14, LINE 1530:         "PNKC_vs_FULL_distance_advantage_Pearson_p",
+CELL 14, LINE 1532:         "PNKC_vs_FULL_distance_advantage_Spearman_rho",
+CELL 14, LINE 1534:         "PNKC_vs_FULL_distance_advantage_Spearman_p",
+CELL 14, LINE 1538:         "PNKC_max_equals_FULL_peak_count",
+CELL 14, LINE 1540:         "PNKC_max_equals_FULL_peak_binomial_p",
+CELL 14, LINE 1570:         "profile_FULL_vs_CSplus_closeness_r",
+CELL 14, LINE 1572:         "profile_FULL_vs_CSplus_closeness_p",
+CELL 14, LINE 1857:     "FULL geometric peaks:",
+CELL 14, LINE 1865:     "Mean FULL peak distance from CS+:",
+CELL 14, LINE 1872:     "Mean FULL peak distance from CS-:",
+CELL 14, LINE 1879:     "Mean FULL distance advantage:",
+CELL 14, LINE 1891:     "Mean ΔPN-KC at FULL peak:",
+CELL 14, LINE 1898:     "Mean ΔKC-EN at FULL peak:",
+CELL 14, LINE 1905:     "Mean ΔFULL at FULL peak:",
+CELL 14, LINE 1920:     "PN-KC maximum = FULL peak:",

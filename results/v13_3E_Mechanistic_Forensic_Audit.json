@@ -1,0 +1,289 @@
+{
+  "status": "PASS",
+  "n_networks": 100,
+  "n_conditions": 4,
+  "input_shapes": {
+    "metrics": [
+      400,
+      27
+    ],
+    "profiles": [
+      40000,
+      7
+    ],
+    "representation": [
+      40000,
+      7
+    ],
+    "training": [
+      8000,
+      8
+    ]
+  },
+  "n_matrix_files": 400,
+  "matrix_reconstruction": {
+    "W_max_error": 0.0,
+    "KCEN_max_error": 0.0
+  },
+  "factorial_identity": {
+    "max_error": 1.7763568394002505e-15
+  },
+  "active_KC_values": [
+    200
+  ],
+  "forensic_flag_count": 36,
+  "forensic_flags": [
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__BEE",
+      "metric": "KCEN_EPLUS_mean_delta",
+      "value": 7.52316384526264e-37,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__BEE",
+      "metric": "KCEN_EMINUS_mean_delta",
+      "value": 5.0545508105724466e-20,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__BEE",
+      "metric": "KCEN_EPLUS_mean_abs_delta",
+      "value": 7.52316384526264e-37,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__BEE",
+      "metric": "KCEN_EMINUS_mean_abs_delta",
+      "value": 5.0545508105724466e-20,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "KCEN_EPLUS_mean_delta",
+      "value": 1.0625186436003597e-21,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "KCEN_EMINUS_mean_delta",
+      "value": 7.52316384526264e-37,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "KCEN_EPLUS_mean_abs_delta",
+      "value": 1.0625186436003597e-21,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "KCEN_EMINUS_mean_abs_delta",
+      "value": 7.52316384526264e-37,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "KCEN_EPLUS_mean_delta",
+      "value": 5.366803352879368e-22,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "KCEN_EMINUS_mean_delta",
+      "value": 4.865899622018263e-20,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "KCEN_EPLUS_mean_abs_delta",
+      "value": 5.366803352879368e-22,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "KCEN_EMINUS_mean_abs_delta",
+      "value": 4.865899622018263e-20,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "KCEN_EPLUS_mean_delta",
+      "value": 1.5775149249372678e-21,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "KCEN_EMINUS_mean_delta",
+      "value": 5.366803352879368e-22,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "KCEN_EPLUS_mean_abs_delta",
+      "value": 1.5775149249372678e-21,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "LOW_VARIANCE",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "KCEN_EMINUS_mean_abs_delta",
+      "value": 5.366803352879368e-22,
+      "interpretation": "Metric is effectively constant across networks."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__BEE",
+      "metric": "PNKC_mean_delta",
+      "value": -0.9773802109541644,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__BEE",
+      "metric": "PNKC_mean_abs_delta",
+      "value": -0.9851997212994178,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__BEE",
+      "metric": "PNKC_positive_fraction",
+      "value": -0.9999999999981548,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__BEE",
+      "metric": "PNKC_changed_fraction",
+      "value": -0.9967291551218782,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "PNKC_mean_delta",
+      "value": 0.9821033140705079,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "PNKC_mean_abs_delta",
+      "value": 0.9889902102616599,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "PNKC_positive_fraction",
+      "value": 0.9999999999954918,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "PNKC_changed_fraction",
+      "value": 0.9965418060370933,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "PNKC_mean_delta",
+      "value": -0.9950528834734635,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "PNKC_mean_abs_delta",
+      "value": -0.9961811474329421,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "PNKC_positive_fraction",
+      "value": -0.9999999999973267,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "PNKC_changed_fraction",
+      "value": -0.9989525778852703,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "PNKC_mean_delta",
+      "value": 0.9975116776294566,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "PNKC_mean_abs_delta",
+      "value": 0.9975763699948347,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "PNKC_positive_fraction",
+      "value": 0.9999999999980599,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "HIGH_CORRELATION",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "PNKC_changed_fraction",
+      "value": 0.9993045775634308,
+      "interpretation": "Discrimination is strongly associated with PN\u2192KC metric; inspect mathematical coupling before causal interpretation."
+    },
+    {
+      "type": "DETERMINISTIC_BEHAVIOUR",
+      "condition": "DROSOPHILA_TRANSFER__BEE",
+      "metric": "both_correct",
+      "value": 0.0,
+      "interpretation": "Both-correct outcome is identical across all networks in this condition."
+    },
+    {
+      "type": "DETERMINISTIC_BEHAVIOUR",
+      "condition": "DROSOPHILA_TRANSFER__DROSOPHILA",
+      "metric": "both_correct",
+      "value": 1.0,
+      "interpretation": "Both-correct outcome is identical across all networks in this condition."
+    },
+    {
+      "type": "DETERMINISTIC_BEHAVIOUR",
+      "condition": "HONEYBEE__BEE",
+      "metric": "both_correct",
+      "value": 0.0,
+      "interpretation": "Both-correct outcome is identical across all networks in this condition."
+    },
+    {
+      "type": "DETERMINISTIC_BEHAVIOUR",
+      "condition": "HONEYBEE__DROSOPHILA",
+      "metric": "both_correct",
+      "value": 1.0,
+      "interpretation": "Both-correct outcome is identical across all networks in this condition."
+    }
+  ]
+}

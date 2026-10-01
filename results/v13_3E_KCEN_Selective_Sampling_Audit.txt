@@ -1,0 +1,144 @@
+v13.3E KCEN SELECTIVE SAMPLING AUDIT
+==============================================================================
+
+This analysis tests whether behavioral discrimination arises from selective sampling of KCEN changes by CS+ and CS- active KC populations.
+
+CONDITION SUMMARY
+                      condition                          metric          mean           sd           min           max
+       DROSOPHILA_TRANSFER__BEE              csplus_EPLUS_delta -5.999996e-02 3.744058e-09 -5.999996e-02 -5.999996e-02
+       DROSOPHILA_TRANSFER__BEE             csplus_EMINUS_delta -3.742801e-02 3.018198e-03 -4.440001e-02 -3.120001e-02
+       DROSOPHILA_TRANSFER__BEE             csminus_EPLUS_delta -2.807099e-02 2.263646e-03 -3.329999e-02 -2.339999e-02
+       DROSOPHILA_TRANSFER__BEE            csminus_EMINUS_delta -8.000003e-02 7.488115e-09 -8.000002e-02 -8.000002e-02
+       DROSOPHILA_TRANSFER__BEE               csplus_KCEN_drive -2.257195e-02 3.018198e-03 -2.879995e-02 -1.559995e-02
+       DROSOPHILA_TRANSFER__BEE              csminus_KCEN_drive  5.192903e-02 2.263646e-03  4.670003e-02  5.660003e-02
+       DROSOPHILA_TRANSFER__BEE   selective_KCEN_discrimination -7.450100e-02 5.281844e-03 -8.539999e-02 -6.229999e-02
+       DROSOPHILA_TRANSFER__BEE              global_EPLUS_delta -2.999998e-03 2.374877e-10 -2.999999e-03 -2.999999e-03
+       DROSOPHILA_TRANSFER__BEE             global_EMINUS_delta -4.000001e-03 2.728927e-10 -4.000001e-03 -4.000001e-03
+       DROSOPHILA_TRANSFER__BEE               global_KCEN_drive  1.000002e-03 2.950673e-10  1.000002e-03  1.000002e-03
+       DROSOPHILA_TRANSFER__BEE          CSplus_CSminus_overlap  4.678500e-01 3.772746e-02  3.900000e-01  5.550000e-01
+       DROSOPHILA_TRANSFER__BEE  CSplus_representation_turnover  0.000000e+00 0.000000e+00  0.000000e+00  0.000000e+00
+       DROSOPHILA_TRANSFER__BEE CSminus_representation_turnover  2.599500e-01 3.141041e-02  1.900000e-01  3.300000e-01
+       DROSOPHILA_TRANSFER__BEE       CSplus_KCEN_heterogeneity  3.980350e-02 2.206064e-04  3.902000e-02  4.000001e-02
+       DROSOPHILA_TRANSFER__BEE      CSminus_KCEN_heterogeneity  7.450581e-09 0.000000e+00  7.450581e-09  7.450581e-09
+DROSOPHILA_TRANSFER__DROSOPHILA              csplus_EPLUS_delta -1.766099e-02 3.315980e-03 -2.639999e-02 -1.139999e-02
+DROSOPHILA_TRANSFER__DROSOPHILA             csplus_EMINUS_delta -5.999996e-02 3.744058e-09 -5.999996e-02 -5.999996e-02
+DROSOPHILA_TRANSFER__DROSOPHILA             csminus_EPLUS_delta -5.999996e-02 3.744058e-09 -5.999996e-02 -5.999996e-02
+DROSOPHILA_TRANSFER__DROSOPHILA            csminus_EMINUS_delta -1.766099e-02 3.315981e-03 -2.639999e-02 -1.139999e-02
+DROSOPHILA_TRANSFER__DROSOPHILA               csplus_KCEN_drive  4.233897e-02 3.315980e-03  3.359997e-02  4.859997e-02
+DROSOPHILA_TRANSFER__DROSOPHILA              csminus_KCEN_drive -4.233897e-02 3.315980e-03 -4.859997e-02 -3.359997e-02
+DROSOPHILA_TRANSFER__DROSOPHILA   selective_KCEN_discrimination  8.467793e-02 6.631961e-03  6.719995e-02  9.719993e-02
+DROSOPHILA_TRANSFER__DROSOPHILA              global_EPLUS_delta -2.999998e-03 2.443069e-10 -2.999999e-03 -2.999999e-03
+DROSOPHILA_TRANSFER__DROSOPHILA             global_EMINUS_delta -2.999998e-03 2.374877e-10 -2.999999e-03 -2.999999e-03
+DROSOPHILA_TRANSFER__DROSOPHILA               global_KCEN_drive -4.656613e-12 4.656613e-11 -2.328306e-10  2.328306e-10
+DROSOPHILA_TRANSFER__DROSOPHILA          CSplus_CSminus_overlap  2.943500e-01 5.526637e-02  1.900000e-01  4.400000e-01
+DROSOPHILA_TRANSFER__DROSOPHILA  CSplus_representation_turnover  0.000000e+00 0.000000e+00  0.000000e+00  0.000000e+00
+DROSOPHILA_TRANSFER__DROSOPHILA CSminus_representation_turnover  9.310000e-02 5.190210e-02  5.000000e-03  2.450000e-01
+DROSOPHILA_TRANSFER__DROSOPHILA       CSplus_KCEN_heterogeneity  1.117587e-08 0.000000e+00  1.117587e-08  1.117587e-08
+DROSOPHILA_TRANSFER__DROSOPHILA      CSminus_KCEN_heterogeneity  2.710569e-02 1.471639e-03  2.353804e-02  2.978320e-02
+                  HONEYBEE__BEE              csplus_EPLUS_delta -5.999996e-02 3.744058e-09 -5.999996e-02 -5.999996e-02
+                  HONEYBEE__BEE             csplus_EMINUS_delta -5.218402e-02 2.696453e-03 -5.960001e-02 -4.440001e-02
+                  HONEYBEE__BEE             csminus_EPLUS_delta -3.913798e-02 2.022338e-03 -4.469997e-02 -3.329999e-02
+                  HONEYBEE__BEE            csminus_EMINUS_delta -8.000003e-02 7.488115e-09 -8.000002e-02 -8.000002e-02
+                  HONEYBEE__BEE               csplus_KCEN_drive -7.815951e-03 2.696453e-03 -1.559995e-02 -3.999472e-04
+                  HONEYBEE__BEE              csminus_KCEN_drive  4.086204e-02 2.022338e-03  3.530005e-02  4.670003e-02
+                  HONEYBEE__BEE   selective_KCEN_discrimination -4.867798e-02 4.718791e-03 -6.229999e-02 -3.569999e-02
+                  HONEYBEE__BEE              global_EPLUS_delta -2.999998e-03 2.340036e-10 -2.999999e-03 -2.999999e-03
+                  HONEYBEE__BEE             global_EMINUS_delta -4.000001e-03 2.846777e-10 -4.000001e-03 -4.000001e-03
+                  HONEYBEE__BEE               global_KCEN_drive  1.000002e-03 2.875485e-10  1.000002e-03  1.000002e-03
+                  HONEYBEE__BEE          CSplus_CSminus_overlap  6.523000e-01 3.370565e-02  5.550000e-01  7.450000e-01
+                  HONEYBEE__BEE  CSplus_representation_turnover  0.000000e+00 0.000000e+00  0.000000e+00  0.000000e+00
+                  HONEYBEE__BEE CSminus_representation_turnover  3.075000e-01 3.306330e-02  2.250000e-01  3.750000e-01
+                  HONEYBEE__BEE       CSplus_KCEN_heterogeneity  3.799533e-02 8.449705e-04  3.486890e-02  3.975727e-02
+                  HONEYBEE__BEE      CSminus_KCEN_heterogeneity  7.450581e-09 0.000000e+00  7.450581e-09  7.450581e-09
+           HONEYBEE__DROSOPHILA              csplus_EPLUS_delta -2.462699e-02 2.143952e-03 -2.999999e-02 -1.979999e-02
+           HONEYBEE__DROSOPHILA             csplus_EMINUS_delta -5.999996e-02 3.744058e-09 -5.999996e-02 -5.999996e-02
+           HONEYBEE__DROSOPHILA             csminus_EPLUS_delta -5.999996e-02 3.744058e-09 -5.999996e-02 -5.999996e-02
+           HONEYBEE__DROSOPHILA            csminus_EMINUS_delta -2.462699e-02 2.143953e-03 -2.999999e-02 -1.979999e-02
+           HONEYBEE__DROSOPHILA               csplus_KCEN_drive  3.537297e-02 2.143952e-03  2.999998e-02  4.019997e-02
+           HONEYBEE__DROSOPHILA              csminus_KCEN_drive -3.537298e-02 2.143953e-03 -4.019997e-02 -2.999998e-02
+           HONEYBEE__DROSOPHILA   selective_KCEN_discrimination  7.074595e-02 4.287905e-03  5.999995e-02  8.039995e-02
+           HONEYBEE__DROSOPHILA              global_EPLUS_delta -2.999998e-03 2.409214e-10 -2.999999e-03 -2.999999e-03
+           HONEYBEE__DROSOPHILA             global_EMINUS_delta -2.999998e-03 2.340036e-10 -2.999999e-03 -2.999999e-03
+           HONEYBEE__DROSOPHILA               global_KCEN_drive -4.656613e-12 3.276051e-11 -2.328306e-10  0.000000e+00
+           HONEYBEE__DROSOPHILA          CSplus_CSminus_overlap  4.104500e-01 3.573256e-02  3.300000e-01  5.000000e-01
+           HONEYBEE__DROSOPHILA  CSplus_representation_turnover  0.000000e+00 0.000000e+00  0.000000e+00  0.000000e+00
+           HONEYBEE__DROSOPHILA CSminus_representation_turnover  9.630000e-02 2.310079e-02  2.000000e-02  1.450000e-01
+           HONEYBEE__DROSOPHILA       CSplus_KCEN_heterogeneity  1.117587e-08 0.000000e+00  1.117587e-08  1.117587e-08
+           HONEYBEE__DROSOPHILA      CSminus_KCEN_heterogeneity  2.943512e-02 3.933675e-04  2.821275e-02  2.999999e-02
+
+REPRESENTATION → SELECTIVE KCEN CORRELATIONS
+                      condition                       predictor                       outcome  pearson_r    pearson_p  spearman_rho    spearman_p
+       DROSOPHILA_TRANSFER__BEE          CSplus_CSminus_overlap selective_KCEN_discrimination   1.000000 0.000000e+00      0.999639 8.949741e-156
+       DROSOPHILA_TRANSFER__BEE          CSplus_CSminus_overlap             csplus_KCEN_drive   1.000000 0.000000e+00      0.999633 2.010518e-155
+       DROSOPHILA_TRANSFER__BEE          CSplus_CSminus_overlap            csminus_KCEN_drive  -1.000000 0.000000e+00     -0.999769 3.276579e-165
+       DROSOPHILA_TRANSFER__BEE  CSplus_representation_turnover selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+       DROSOPHILA_TRANSFER__BEE  CSplus_representation_turnover             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+       DROSOPHILA_TRANSFER__BEE  CSplus_representation_turnover            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+       DROSOPHILA_TRANSFER__BEE CSminus_representation_turnover selective_KCEN_discrimination   0.697369 7.604580e-16      0.690159  1.976438e-15
+       DROSOPHILA_TRANSFER__BEE CSminus_representation_turnover             csplus_KCEN_drive   0.697369 7.604530e-16      0.693247  1.317435e-15
+       DROSOPHILA_TRANSFER__BEE CSminus_representation_turnover            csminus_KCEN_drive  -0.697369 7.604581e-16     -0.689141  2.256667e-15
+       DROSOPHILA_TRANSFER__BEE       CSplus_KCEN_heterogeneity selective_KCEN_discrimination   0.766351 1.528327e-20      0.823020  8.219630e-26
+       DROSOPHILA_TRANSFER__BEE       CSplus_KCEN_heterogeneity             csplus_KCEN_drive   0.766351 1.528327e-20      0.822916  8.437443e-26
+       DROSOPHILA_TRANSFER__BEE       CSplus_KCEN_heterogeneity            csminus_KCEN_drive  -0.766351 1.528327e-20     -0.823252  7.752717e-26
+       DROSOPHILA_TRANSFER__BEE      CSminus_KCEN_heterogeneity selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+       DROSOPHILA_TRANSFER__BEE      CSminus_KCEN_heterogeneity             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+       DROSOPHILA_TRANSFER__BEE      CSminus_KCEN_heterogeneity            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+DROSOPHILA_TRANSFER__DROSOPHILA          CSplus_CSminus_overlap selective_KCEN_discrimination  -1.000000 0.000000e+00     -0.999892 2.079015e-181
+DROSOPHILA_TRANSFER__DROSOPHILA          CSplus_CSminus_overlap             csplus_KCEN_drive  -1.000000 0.000000e+00     -0.999850 2.026720e-174
+DROSOPHILA_TRANSFER__DROSOPHILA          CSplus_CSminus_overlap            csminus_KCEN_drive   1.000000 0.000000e+00      0.999898 1.264024e-182
+DROSOPHILA_TRANSFER__DROSOPHILA  CSplus_representation_turnover selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+DROSOPHILA_TRANSFER__DROSOPHILA  CSplus_representation_turnover             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+DROSOPHILA_TRANSFER__DROSOPHILA  CSplus_representation_turnover            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+DROSOPHILA_TRANSFER__DROSOPHILA CSminus_representation_turnover selective_KCEN_discrimination  -0.870238 6.781175e-32     -0.827997  2.308438e-26
+DROSOPHILA_TRANSFER__DROSOPHILA CSminus_representation_turnover             csplus_KCEN_drive  -0.870238 6.781144e-32     -0.828361  2.099925e-26
+DROSOPHILA_TRANSFER__DROSOPHILA CSminus_representation_turnover            csminus_KCEN_drive   0.870238 6.781275e-32      0.826334  3.544009e-26
+DROSOPHILA_TRANSFER__DROSOPHILA       CSplus_KCEN_heterogeneity selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+DROSOPHILA_TRANSFER__DROSOPHILA       CSplus_KCEN_heterogeneity             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+DROSOPHILA_TRANSFER__DROSOPHILA       CSplus_KCEN_heterogeneity            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+DROSOPHILA_TRANSFER__DROSOPHILA      CSminus_KCEN_heterogeneity selective_KCEN_discrimination  -0.979679 3.435954e-70     -0.999721 3.232133e-161
+DROSOPHILA_TRANSFER__DROSOPHILA      CSminus_KCEN_heterogeneity             csplus_KCEN_drive  -0.979679 3.435954e-70     -0.999697 1.839377e-159
+DROSOPHILA_TRANSFER__DROSOPHILA      CSminus_KCEN_heterogeneity            csminus_KCEN_drive   0.979679 3.435954e-70      0.999769 3.107186e-165
+                  HONEYBEE__BEE          CSplus_CSminus_overlap selective_KCEN_discrimination   1.000000 0.000000e+00      0.999246 4.482346e-140
+                  HONEYBEE__BEE          CSplus_CSminus_overlap             csplus_KCEN_drive   1.000000 0.000000e+00      0.999327 1.710269e-142
+                  HONEYBEE__BEE          CSplus_CSminus_overlap            csminus_KCEN_drive  -1.000000 0.000000e+00     -0.999919 1.708814e-187
+                  HONEYBEE__BEE  CSplus_representation_turnover selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+                  HONEYBEE__BEE  CSplus_representation_turnover             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+                  HONEYBEE__BEE  CSplus_representation_turnover            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+                  HONEYBEE__BEE CSminus_representation_turnover selective_KCEN_discrimination   0.577825 3.084405e-10      0.568147  7.038400e-10
+                  HONEYBEE__BEE CSminus_representation_turnover             csplus_KCEN_drive   0.577825 3.084408e-10      0.569890  6.078504e-10
+                  HONEYBEE__BEE CSminus_representation_turnover            csminus_KCEN_drive  -0.577825 3.084400e-10     -0.567880  7.198024e-10
+                  HONEYBEE__BEE       CSplus_KCEN_heterogeneity selective_KCEN_discrimination  -0.981622 2.618429e-72     -0.999152 1.345843e-137
+                  HONEYBEE__BEE       CSplus_KCEN_heterogeneity             csplus_KCEN_drive  -0.981622 2.618429e-72     -0.999242 5.480258e-140
+                  HONEYBEE__BEE       CSplus_KCEN_heterogeneity            csminus_KCEN_drive   0.981622 2.618429e-72      0.999759 2.203446e-164
+                  HONEYBEE__BEE      CSminus_KCEN_heterogeneity selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+                  HONEYBEE__BEE      CSminus_KCEN_heterogeneity             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+                  HONEYBEE__BEE      CSminus_KCEN_heterogeneity            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+           HONEYBEE__DROSOPHILA          CSplus_CSminus_overlap selective_KCEN_discrimination  -1.000000 0.000000e+00     -0.999224 1.821422e-139
+           HONEYBEE__DROSOPHILA          CSplus_CSminus_overlap             csplus_KCEN_drive  -1.000000 0.000000e+00     -0.999112 1.281253e-136
+           HONEYBEE__DROSOPHILA          CSplus_CSminus_overlap            csminus_KCEN_drive   1.000000 0.000000e+00      0.998746 2.867937e-129
+           HONEYBEE__DROSOPHILA  CSplus_representation_turnover selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+           HONEYBEE__DROSOPHILA  CSplus_representation_turnover             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+           HONEYBEE__DROSOPHILA  CSplus_representation_turnover            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+           HONEYBEE__DROSOPHILA CSminus_representation_turnover selective_KCEN_discrimination  -0.213125 3.325584e-02     -0.164003  1.030029e-01
+           HONEYBEE__DROSOPHILA CSminus_representation_turnover             csplus_KCEN_drive  -0.213125 3.325587e-02     -0.161663  1.080781e-01
+           HONEYBEE__DROSOPHILA CSminus_representation_turnover            csminus_KCEN_drive   0.213125 3.325575e-02      0.164642  1.016499e-01
+           HONEYBEE__DROSOPHILA       CSplus_KCEN_heterogeneity selective_KCEN_discrimination        NaN          NaN           NaN           NaN
+           HONEYBEE__DROSOPHILA       CSplus_KCEN_heterogeneity             csplus_KCEN_drive        NaN          NaN           NaN           NaN
+           HONEYBEE__DROSOPHILA       CSplus_KCEN_heterogeneity            csminus_KCEN_drive        NaN          NaN           NaN           NaN
+           HONEYBEE__DROSOPHILA      CSminus_KCEN_heterogeneity selective_KCEN_discrimination  -0.955763 6.956703e-54     -0.998986 8.693873e-134
+           HONEYBEE__DROSOPHILA      CSminus_KCEN_heterogeneity             csplus_KCEN_drive  -0.955763 6.956703e-54     -0.998583 1.139093e-126
+           HONEYBEE__DROSOPHILA      CSminus_KCEN_heterogeneity            csminus_KCEN_drive   0.955763 6.956703e-54      0.998764 1.403136e-129
+
+GLOBAL vs SELECTIVE KCEN
+                      condition  global_KCEN_drive_mean  global_KCEN_drive_sd  selective_KCEN_discrimination_mean  selective_KCEN_discrimination_sd  pearson_r  pearson_p  spearman_rho  spearman_p
+       DROSOPHILA_TRANSFER__BEE            1.000002e-03          2.950673e-10                           -0.074501                          0.005282  -0.014439   0.886624     -0.014098    0.889281
+DROSOPHILA_TRANSFER__DROSOPHILA           -4.656613e-12          4.656613e-11                            0.084678                          0.006632  -0.003381   0.973366      0.006826    0.946258
+                  HONEYBEE__BEE            1.000002e-03          2.875485e-10                           -0.048678                          0.004719  -0.026645   0.792434     -0.062470    0.536939
+           HONEYBEE__DROSOPHILA           -4.656613e-12          3.276051e-11                            0.070746                          0.004288  -0.172577   0.085982     -0.152374    0.130170
+
+CS+ vs CS- SELECTIVE KCEN
+                      condition  mean_CSplus_drive  mean_CSminus_drive  mean_CSplus_minus_CSminus  paired_Cohen_d    paired_t      paired_p
+       DROSOPHILA_TRANSFER__BEE          -0.022572            0.051929                  -0.074501      -14.105113 -141.051129 6.209220e-116
+DROSOPHILA_TRANSFER__DROSOPHILA           0.042339           -0.042339                   0.084678       12.768160  127.681599 1.125644e-111
+                  HONEYBEE__BEE          -0.007816            0.040862                  -0.048678      -10.315774 -103.157736 1.422947e-102
+           HONEYBEE__DROSOPHILA           0.035373           -0.035373                   0.070746       16.498955  164.989557 1.206453e-122

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "input_files": {
+    "metrics": true,
+    "profiles": true,
+    "representation": true,
+    "training": true
+  },
+  "shapes": {
+    "metrics": [
+      400,
+      27
+    ],
+    "profiles": [
+      40000,
+      7
+    ],
+    "representation": [
+      40000,
+      7
+    ],
+    "training": [
+      8000,
+      8
+    ]
+  },
+  "n_networks": 100,
+  "n_conditions": 4,
+  "conditions": [
+    "DROSOPHILA_TRANSFER__BEE",
+    "DROSOPHILA_TRANSFER__DROSOPHILA",
+    "HONEYBEE__BEE",
+    "HONEYBEE__DROSOPHILA"
+  ],
+  "condition_summary_rows": 4,
+  "factorial_rows": 19,
+  "representation_summary_rows": 4,
+  "association_rows": 58,
+  "all_numeric_metrics_finite": true,
+  "all_analysis_outputs_exist": true
+}

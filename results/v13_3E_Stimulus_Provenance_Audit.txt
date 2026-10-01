@@ -1,0 +1,31 @@
+v13.3E — STIMULUS PROVENANCE / 28-vs-44 AUDIT
+==============================================================================
+Candidate files scanned: 643
+Valid 100x100 continuum files: 1
+Files with Hamming distance 28: 1
+Files with Hamming distance 44: 0
+
+CURRENT v13.3E CONTINUUM
+Path: /content/drive/MyDrive/Honey/Honeybee_Model_v10_3_Validated_Continuum.csv
+CS+ index: 50
+CS- index: 64
+CS+ active: 50
+CS- active: 50
+Hamming distance: 28
+Active overlap: 36
+Jaccard: 0.5625
+Matrix hash: 7a6207dc104413e1a6fa20f4f3fd05dd
+
+HAMMING = 28 FILES
+------------------------------------------------------------------------------
+/content/drive/MyDrive/Honey/Honeybee_Model_v10_3_Validated_Continuum.csv
+
+HAMMING = 44 FILES
+------------------------------------------------------------------------------
+
+AUDIT INTERPRETATION
+------------------------------------------------------------------------------
+The current search identified 28/100 geometry but did not identify a valid 44/100 geometry.
+The older 44/100 figure therefore requires additional source tracing before it can be connected to v13.3E.
+
+[PASS] Stimulus provenance audit completed

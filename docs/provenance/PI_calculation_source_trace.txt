@@ -1,0 +1,139 @@
+PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=PI CALCULATION SOURCE TRACE
+=
+
+Notebook: /content/drive/MyDrive/Colab Notebooks/Untitled94.ipynb
+Total cells: 14
+
+PI-related cells:
+Cell 1 | type=code | length=24625 | matches=['\\bPI\\b', '\\bpi\\b', 'cs_plus_pi', 'cs_minus_pi', 'ResponseProfiles']
+Cell 2 | type=code | length=24625 | matches=['\\bPI\\b', '\\bpi\\b', 'cs_plus_pi', 'cs_minus_pi', 'ResponseProfiles']
+Cell 3 | type=code | length=21102 | matches=['\\bPI\\b', '\\bpi\\b', 'cs_plus_pi', 'cs_minus_pi', 'ResponseProfiles']
+Cell 7 | type=code | length=18958 | matches=['\\bPI\\b', '\\bpi\\b', 'cs_plus_pi', 'ResponseProfiles']
+Cell 8 | type=code | length=21102 | matches=['\\bPI\\b', '\\bpi\\b', 'ResponseProfiles']
+Cell 9 | type=code | length=25478 | matches=['\\bPI\\b', '\\bpi\\b', 'ResponseProfiles']
+Cell 10 | type=code | length=22459 | matches=['\\bPI\\b', '\\bpi\\b', 'ResponseProfiles']
+Cell 11 | type=code | length=22704 | matches=['\\bPI\\b', '\\bpi\\b', 'ResponseProfiles']
+
+
+Potential PI formula lines:
+Cell 1, line 289, score=3:          (W_initial * number_active_KCs) * 100
+Cell 2, line 289, score=3:          (W_initial * number_active_KCs) * 100
+Cell 3, line 261, score=3:         pi = d["PI"].to_numpy()
+Cell 1, line 79, score=2: N_ACTIVE_KC = int(N_KC * KC_SPARSITY)
+Cell 1, line 263, score=2:     # Exactly N_ACTIVE_KC KCs
+Cell 1, line 266, score=2:         -N_ACTIVE_KC
+Cell 1, line 267, score=2:     )[-N_ACTIVE_KC:]
+Cell 1, line 288, score=2:     PI = -(EN+ - EN-) /
+Cell 1, line 296, score=2:         N_ACTIVE_KC
+Cell 1, line 379, score=2:         kc_response, active_idx = activate_kcs(
+Cell 1, line 397, score=2:             active_kcs = active_idx
+Cell 1, line 406, score=2:                 for kc in active_kcs:
+Cell 1, line 416, score=2:                 for kc in active_kcs:
+Cell 1, line 473, score=2:         kc_response, active_idx = activate_kcs(
+Cell 1, line 593, score=2:         peak_pi = float(
+Cell 1, line 597, score=2:         cs_plus_pi = float(
+Cell 1, line 601, score=2:         cs_minus_pi = float(
+Cell 1, line 690, score=2:             N_ACTIVE_KC *
+Cell 1, line 722, score=2:                 "active_KC_count": int(
+Cell 1, line 790, score=2:             "mean_active_kcs":
+Cell 1, line 793, score=2:             "min_active_kcs":
+Cell 1, line 796, score=2:             "max_active_kcs":
+Cell 2, line 79, score=2: N_ACTIVE_KC = int(N_KC * KC_SPARSITY)
+Cell 2, line 263, score=2:     # Exactly N_ACTIVE_KC KCs
+Cell 2, line 266, score=2:         -N_ACTIVE_KC
+Cell 2, line 267, score=2:     )[-N_ACTIVE_KC:]
+Cell 2, line 288, score=2:     PI = -(EN+ - EN-) /
+Cell 2, line 296, score=2:         N_ACTIVE_KC
+Cell 2, line 379, score=2:         kc_response, active_idx = activate_kcs(
+Cell 2, line 397, score=2:             active_kcs = active_idx
+Cell 2, line 406, score=2:                 for kc in active_kcs:
+Cell 2, line 416, score=2:                 for kc in active_kcs:
+Cell 2, line 473, score=2:         kc_response, active_idx = activate_kcs(
+Cell 2, line 593, score=2:         peak_pi = float(
+Cell 2, line 597, score=2:         cs_plus_pi = float(
+Cell 2, line 601, score=2:         cs_minus_pi = float(
+Cell 2, line 690, score=2:             N_ACTIVE_KC *
+Cell 2, line 722, score=2:                 "active_KC_count": int(
+Cell 2, line 790, score=2:             "mean_active_kcs":
+Cell 2, line 793, score=2:             "min_active_kcs":
+Cell 2, line 796, score=2:             "max_active_kcs":
+Cell 3, line 275, score=2:         peak_pi = float(
+Cell 3, line 279, score=2:         cs_plus_pi = float(
+Cell 3, line 283, score=2:         cs_minus_pi = float(
+Cell 3, line 325, score=2:         mean_pi = float(
+Cell 3, line 339, score=2:             geometric_pi = (
+Cell 3, line 448, score=2:             d["peak_geometric"].mean() * 100,
+Cell 3, line 451, score=2:             d["strict_peak_shift"].mean() * 100,
+Cell 6, line 137, score=2:     "mean_active_kcs"
+Cell 6, line 225, score=2:     "mean_active_kcs"
+Cell 9, line 362, score=2:     full_peak_pi = FULL[n, fp]
+Cell 9, line 363, score=2:     kc_peak_pi = KC_EN_ONLY[n, kp]

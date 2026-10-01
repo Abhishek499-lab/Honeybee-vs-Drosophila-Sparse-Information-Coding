@@ -1,0 +1,25 @@
+v13.3E — UNTITLED120 CHRONOLOGICAL 44-SOURCE FORENSIC AUDIT
+==============================================================================
+Total notebook cells: 24
+44-related cells: 4
+Audit-added cells: 1
+Possible original calculation cells: 3
+
+CELL SUMMARY
+------------------------------------------------------------------------------
+CELL 19 | POSSIBLE_ANALYSIS_CODE | overlap
+CELL 21 | POSSIBLE_ORIGINAL_CALCULATION | overlap
+CELL 22 | AUDIT_CODE_ADDED_LATER | Hamming distance = 44; Hamming distance 44; 44/100; 28/50; 38.9%; hamming; jaccard; overlap
+CELL 23 | POSSIBLE_ORIGINAL_CALCULATION | Hamming distance = 44; Hamming distance: 44; Hamming distance 44; 44 / 100; 44/100; 28/50; 28 / 50; 38.9%; 0.389; hamming; jaccard; overlap
+
+PRE-AUDIT NUMERICAL 44 TEST
+------------------------------------------------------------------------------
+CELL 22 | AUDIT_CODE_ADDED_LATER | hamming\s+distance\s*=\s*44; 44\s*/\s*100; 44/100; hamming\s*=\s*44; distance\s*=\s*44; 44\s*/\s*100
+CELL 23 | POSSIBLE_ORIGINAL_CALCULATION | hamming\s+distance\s*=\s*44; hamming\s+distance\s*:\s*44; 44\s*/\s*100; 44/100; distance\s*=\s*44; 44\s*/\s*100
+
+INTERPRETATION
+------------------------------------------------------------------------------
+At least one pre-existing candidate cell contains Hamming/Jaccard/stimulus calculation signatures.
+Those cells require direct inspection before assigning provenance to the 44-distance result.
+
+[PASS] Chronological Untitled120 forensic audit completed

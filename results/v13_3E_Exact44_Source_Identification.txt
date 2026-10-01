@@ -1,0 +1,19 @@
+v13.3E — EXACT 44-DISTANCE SOURCE IDENTIFICATION
+==============================================================================
+Exact-44 source files: 4
+High-priority candidates: 2
+Same-source 44 + geometry terms: 3
+
+SOURCE CLASSIFICATION
+------------------------------------------------------------------------------
+HIGH_PRIORITY_SOURCE_OR_CALCULATION | score=15 | hits=32 | /content/drive/MyDrive/Colab Notebooks/Untitled120.ipynb
+LIKELY_OUTPUT_OR_REPORT | score=5 | hits=2 | /content/drive/MyDrive/Colab Notebooks/Untitled93.ipynb
+POSSIBLE_CALCULATION_SOURCE | score=10 | hits=3 | /content/drive/MyDrive/Honey/GitHub_Honeybee-Drosophila/results/v13_3E_Stimulus_Provenance_Audit.txt
+TEXT_REFERENCE | score=3 | hits=1 | /content/drive/MyDrive/Colab Notebooks/Untitled94.ipynb
+
+INTERPRETATION
+------------------------------------------------------------------------------
+At least one exact-44 source candidate contains code-like stimulus/geometry signatures.
+These files should be treated as provenance candidates, not as evidence that the 44-distance geometry belongs to the current v13.3E continuum.
+
+[PASS] Exact-44 source identification completed

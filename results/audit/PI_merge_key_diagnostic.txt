@@ -1,0 +1,12 @@
+PI MERGE KEY DIAGNOSTIC
+======================================================================
+
+Profile conditions:
+['FULL', 'KC_EN_ONLY', 'NONE', 'PN_KC_ONLY']
+
+NPZ conditions:
+['DROSOPHILA_TRANSFER__BEE', 'DROSOPHILA_TRANSFER__DROSOPHILA', 'HONEYBEE__BEE', 'HONEYBEE__DROSOPHILA']
+
+Merge network +1: 0 rows
+Merge network zero-based: 0 rows
+Merge after condition normalization: 0 rows

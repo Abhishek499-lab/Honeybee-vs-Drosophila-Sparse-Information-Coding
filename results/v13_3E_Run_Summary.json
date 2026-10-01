@@ -1,0 +1,24 @@
+{
+  "model": "v13.3E",
+  "source": "Untitled98.ipynb Cell 64",
+  "conditions": [
+    "HONEYBEE__BEE",
+    "HONEYBEE__DROSOPHILA",
+    "DROSOPHILA_TRANSFER__BEE",
+    "DROSOPHILA_TRANSFER__DROSOPHILA"
+  ],
+  "networks_per_condition": 100,
+  "total_networks": 400,
+  "stimuli_per_network": 100,
+  "trials_per_network": 20,
+  "N_PN": 100,
+  "N_KC": 4000,
+  "active_KC": 200,
+  "metrics_rows": 400,
+  "profile_rows": 40000,
+  "representation_rows": 40000,
+  "training_rows": 8000,
+  "matrix_files": 400,
+  "matrix_storage": "one NPZ per network",
+  "status": "PASS"
+}

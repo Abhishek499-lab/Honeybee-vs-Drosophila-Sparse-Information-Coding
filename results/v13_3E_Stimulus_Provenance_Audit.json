@@ -1,0 +1,31 @@
+{
+  "candidate_files_scanned": 643,
+  "valid_100x100_continuum_files": 1,
+  "distance_28_files": 1,
+  "distance_44_files": 0,
+  "unique_valid_stimulus_matrices": 1,
+  "current_validated_continuum": {
+    "file": "/content/drive/MyDrive/Honey/Honeybee_Model_v10_3_Validated_Continuum.csv",
+    "filename": "Honeybee_Model_v10_3_Validated_Continuum.csv",
+    "extension": ".csv",
+    "status": "VALID_100x100_CONTINUUM",
+    "reason": "PASS",
+    "n_rows": 100,
+    "n_columns": 103,
+    "n_pn": 100,
+    "pattern_column": "pattern",
+    "csplus_index": 50,
+    "csminus_index": 64,
+    "csplus_active": 50,
+    "csminus_active": 50,
+    "hamming_distance": 28,
+    "active_overlap": 36,
+    "jaccard_similarity": 0.5625,
+    "matrix_hash": "7a6207dc104413e1a6fa20f4f3fd05dd",
+    "file_md5": "d16a15fe7d828f5934228289833e2369"
+  },
+  "distance_28_paths": [
+    "/content/drive/MyDrive/Honey/Honeybee_Model_v10_3_Validated_Continuum.csv"
+  ],
+  "distance_44_paths": []
+}

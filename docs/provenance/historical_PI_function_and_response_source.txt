@@ -1,0 +1,303 @@
+HISTORICAL PI FUNCTION AND RESPONSE SOURCE
+======================================================================
+
+COMPLETE compute_pi_profile() FUNCTION
+----------------------------------------------------------------------
+  279: def compute_pi_profile(
+  280:     kc_representations,
+  281:     kc_en_plus,
+  282:     kc_en_minus
+  283: ):
+  284: 
+  285:     """
+  286:     Compute PI for every stimulus.
+  287: 
+  288:     PI = -(EN+ - EN-) /
+  289:          (W_initial * number_active_KCs) * 100
+  290:     """
+  291: 
+  292:     profile = np.zeros(N_STIMULI)
+  293: 
+  294:     denominator = (
+  295:         INITIAL_WEIGHT *
+  296:         N_ACTIVE_KC
+  297:     )
+  298: 
+  299:     for i in range(N_STIMULI):
+  300: 
+  301:         kc = kc_representations[i]
+  302: 
+  303:         en_plus = np.dot(
+  304:             kc_en_plus,
+  305:             kc
+  306:         )
+  307: 
+  308:         en_minus = np.dot(
+  309:             kc_en_minus,
+  310:             kc
+  311:         )
+  312: 
+  313:         profile[i] = (
+  314:             -(en_plus - en_minus)
+  315:             / denominator
+  316:             * 100
+  317:         )
+  318: 
+  319:     return profile
+  320: 
+  321: 
+
+
+PI-RELATED CONSTANTS
+----------------------------------------------------------------------
+   84: INITIAL_WEIGHT = 0.2
+  295:         INITIAL_WEIGHT *
+  336:         INITIAL_WEIGHT,
+  342:         INITIAL_WEIGHT,
+  348:         INITIAL_WEIGHT,
+  650:                     INITIAL_WEIGHT
+   79: N_ACTIVE_KC = int(N_KC * KC_SPARSITY)
+  263:     # Exactly N_ACTIVE_KC KCs
+  266:         -N_ACTIVE_KC
+  267:     )[-N_ACTIVE_KC:]
+  296:         N_ACTIVE_KC
+  690:             N_ACTIVE_KC *
+   76: N_KC = 4000
+   79: N_ACTIVE_KC = int(N_KC * KC_SPARSITY)
+   89: PN_KC_ALPHA_PLUS = 0.006
+   90: PN_KC_ALPHA_MINUS = 0.007
+  227:     for kc in range(N_KC):
+  252:     kc_input = np.empty(N_KC, dtype=np.float32)
+  254:     for kc in range(N_KC):
+  270:         N_KC,
+  335:         (N_KC, N_PN),
+  341:         N_KC,
+  347:         N_KC,
+  411:                     ] += PN_KC_ALPHA_PLUS
+  421:                     ] -= PN_KC_ALPHA_MINUS
+  462:         (N_STIMULI, N_KC),
+  512:     "PN_KC_ONLY": (True, False),
+  864:         "mean_changed_PN_KC_percent":
+  962:     ("FULL", "PN_KC_ONLY"),
+  964:     ("PN_KC_ONLY", "NONE"),
+   78: KC_SPARSITY = 0.05
+   79: N_ACTIVE_KC = int(N_KC * KC_SPARSITY)
+   98: N_STIMULI = 100
+  196:     np.arange(N_STIMULI) != cs_plus_idx
+  198:     np.arange(N_STIMULI) != cs_minus_idx
+  210: print("Geometric candidate stimuli:", n_geometric, "/", N_STIMULI)
+  292:     profile = np.zeros(N_STIMULI)
+  299:     for i in range(N_STIMULI):
+  462:         (N_STIMULI, N_KC),
+  467:         N_STIMULI,
+  471:     for i in range(N_STIMULI):
+  698:         for stimulus_idx in range(N_STIMULI):
+   95: CS_PLUS = 51
+  175: cs_plus_idx = CS_PLUS - 1
+  206: print("CS+:", CS_PLUS)
+   96: CS_MINUS = 65
+  176: cs_minus_idx = CS_MINUS - 1
+  207: print("CS-:", CS_MINUS)
+
+
+KC RESPONSE GENERATION CONTEXT
+----------------------------------------------------------------------
+  240:         kc_connections.append(pn_idx)
+  241: 
+  242:     return kc_connections
+  243: 
+  244: 
+  245: def activate_kcs(stimulus, kc_connections, pn_kc_weights):
+  246:     """
+  247:     Compute KC activation.
+  248: 
+  249:     Exactly 5% of KCs are selected using top-input ranking.
+  250:     """
+  251: 
+  252:     kc_input = np.empty(N_KC, dtype=np.float32)
+  264:     active_idx = np.argpartition(
+  265:         kc_input,
+  266:         -N_ACTIVE_KC
+  267:     )[-N_ACTIVE_KC:]
+  268: 
+  269:     kc_response = np.zeros(
+  270:         N_KC,
+  271:         dtype=np.float32
+  272:     )
+  273: 
+  274:     kc_response[active_idx] = 1.0
+  275: 
+  276:     return kc_response, active_idx
+  277: 
+  278: 
+  279: def compute_pi_profile(
+  280:     kc_representations,
+  281:     kc_en_plus,
+  282:     kc_en_minus
+  283: ):
+  284: 
+  285:     """
+  286:     Compute PI for every stimulus.
+  287: 
+  288:     PI = -(EN+ - EN-) /
+  289:          (W_initial * number_active_KCs) * 100
+  296:         N_ACTIVE_KC
+  297:     )
+  298: 
+  299:     for i in range(N_STIMULI):
+  300: 
+  301:         kc = kc_representations[i]
+  302: 
+  303:         en_plus = np.dot(
+  304:             kc_en_plus,
+  305:             kc
+  306:         )
+  307: 
+  308:         en_minus = np.dot(
+  309:             kc_en_minus,
+  310:             kc
+  311:         )
+  312: 
+  313:         profile[i] = (
+  314:             -(en_plus - en_minus)
+  315:             / denominator
+  316:             * 100
+  335:         (N_KC, N_PN),
+  336:         INITIAL_WEIGHT,
+  337:         dtype=np.float32
+  338:     )
+  339: 
+  340:     kc_en_plus = np.full(
+  341:         N_KC,
+  342:         INITIAL_WEIGHT,
+  343:         dtype=np.float32
+  344:     )
+  345: 
+  346:     kc_en_minus = np.full(
+  347:         N_KC,
+  348:         INITIAL_WEIGHT,
+  349:         dtype=np.float32
+  350:     )
+  351: 
+  352:     # -------------------------------------------------------------------------
+  353:     # PRECOMPUTE KC RESPONSES DURING TRAINING
+  374:             stim_idx = cs_minus_idx
+  375:             is_cs_plus = False
+  376: 
+  377:         stimulus = continuum[stim_idx]
+  378: 
+  379:         kc_response, active_idx = activate_kcs(
+  380:             stimulus,
+  381:             kc_connections,
+  382:             pn_kc
+  383:         )
+  384: 
+  385:         # Save representation from final/current network
+  386:         if is_cs_plus:
+  433:         if plastic_kc_en:
+  434: 
+  435:             if is_cs_plus:
+  436: 
+  437:                 # Appetitive learning depresses EN+
+  438:                 kc_en_plus[active_idx] -= KC_EN_ALPHA_PLUS
+  439: 
+  440:                 kc_en_plus = np.clip(
+  441:                     kc_en_plus,
+  442:                     WEIGHT_MIN,
+  443:                     WEIGHT_MAX
+  444:                 )
+  445: 
+  446:             else:
+  447: 
+  448:                 # Aversive learning depresses EN-
+  449:                 kc_en_minus[active_idx] -= KC_EN_ALPHA_MINUS
+  450: 
+  451:                 kc_en_minus = np.clip(
+  452:                     kc_en_minus,
+  453:                     WEIGHT_MIN,
+  454:                     WEIGHT_MAX
+  455:                 )
+  456: 
+  457:     # -------------------------------------------------------------------------
+  458:     # FINAL KC REPRESENTATIONS FOR ALL 100 STIMULI
+  459:     # -------------------------------------------------------------------------
+  460: 
+  461:     kc_representations = np.zeros(
+  462:         (N_STIMULI, N_KC),
+  463:         dtype=np.uint8
+  464:     )
+  465: 
+  466:     active_counts = np.zeros(
+  467:         N_STIMULI,
+  468:         dtype=np.int16
+  469:     )
+  470: 
+  471:     for i in range(N_STIMULI):
+  472: 
+  473:         kc_response, active_idx = activate_kcs(
+  474:             continuum[i],
+  475:             kc_connections,
+  476:             pn_kc
+  477:         )
+  478: 
+  479:         kc_representations[
+  480:             i,
+  481:             active_idx
+  482:         ] = 1
+  483: 
+  484:         active_counts[i] = len(active_idx)
+  485: 
+  486:     # -------------------------------------------------------------------------
+  487:     # FULL PI PROFILE
+  488:     # -------------------------------------------------------------------------
+  489: 
+  490:     pi_profile = compute_pi_profile(
+  491:         kc_representations,
+  492:         kc_en_plus,
+  493:         kc_en_minus
+  494:     )
+  495: 
+  496:     return (
+  497:         pn_kc,
+  498:         kc_en_plus,
+  499:         kc_en_minus,
+  500:         kc_representations,
+  501:         active_counts,
+  502:         pi_profile
+  503:     )
+  504: 
+  505: 
+  506: # =============================================================================
+  507: # 6. CONDITIONS
+  566:             network_id
+  567:         )
+  568: 
+  569:         (
+  570:             pn_kc,
+  571:             kc_en_plus,
+  572:             kc_en_minus,
+  573:             kc_representations,
+  574:             active_counts,
+  575:             pi_profile
+  576:         ) = train_network(
+  577:             continuum,
+  578:             kc_connections,
+  579:             plastic_pn_kc,
+  580:             plastic_kc_en,
+  668: 
+  669:         # =====================================================================
+  670:         # KC REPRESENTATION SIMILARITY
+  671:         # =====================================================================
+  672: 
+  673:         cs_plus_kc = kc_representations[
+  674:             cs_plus_idx
+  675:         ]
+  676: 
+  677:         cs_minus_kc = kc_representations[
+  678:             cs_minus_idx
+  679:         ]
+  680: 
+  681:         learned_overlap = int(
+  682:             np.sum(
+  683:                 cs_plus_kc *
+  684:                 cs_minus_kc

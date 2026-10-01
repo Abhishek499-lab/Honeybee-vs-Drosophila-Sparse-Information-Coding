@@ -1,0 +1,18 @@
+PI NUMERICAL IDENTITY AUDIT
+======================================================================
+
+Historical equation:
+PI = -(EN+ - EN-) / (INITIAL_WEIGHT * N_ACTIVE_KC) * 100
+
+INITIAL_WEIGHT = 0.2
+N_ACTIVE_KC = 200
+Denominator = 40
+
+Reconstructed rows = 0
+Maximum absolute difference = nan
+Mean absolute difference = nan
+RMSE = nan
+Pearson correlation = nan
+Within 1e-5 = nan%
+
+FINAL STATUS: FAIL / INVESTIGATE

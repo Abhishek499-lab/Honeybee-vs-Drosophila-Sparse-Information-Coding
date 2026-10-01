@@ -1,0 +1,22 @@
+v13.3E — KCEN REPRESENTATION-PERMUTATION CAUSAL NULL
+==============================================================================
+Networks: 400
+Conditions: 4
+Permutations per network: 100
+Total null observations: 40,000
+CS+ active KCs: [np.int64(200)]
+CS- active KCs: [np.int64(200)]
+
+GLOBAL RESULT
+Observed discrimination mean = 1.61224988
+Null discrimination mean = -0.00149901
+Observed-minus-null mean = 1.61374889
+Paired t = 2.28247899
+Paired p = 2.29866062e-02
+
+INTERPRETATION
+The permutation preserves the final KCEN values and the CS+/CS- KC representations but randomizes the mapping between KC identity and KCEN state.
+A strong reduction of discrimination toward the null supports the interpretation that stimulus-specific KCEN-to-KC mapping contributes to the modeled discrimination.
+This is a computational causal/null result and should not be interpreted as direct biological validation.
+
+[PASS] KCEN representation-permutation audit
